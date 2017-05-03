@@ -14,6 +14,8 @@ import Main from './Main';
 import SignUp from './SignUp';
 import LogIn from './LogIn';
 import CreateTextPost from './CreateTextPost'
+import CreateLinkPost from './CreateLinkPost'
+import CreatePicPost from './CreatePicPost'
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -38,7 +40,9 @@ const PaprPlanes = StackNavigator({
   LogIn: {screen: LogIn },
   SignUp: {screen: SignUp },
   Main: {screen: Main },
-  CreateTextPost: { screen: CreateTextPost }
+  CreateTextPost: { screen: CreateTextPost },
+  CreateLinkPost: { screen: CreateLinkPost },
+  CreatePicPost: { screen: CreatePicPost },
 });
 
 AppRegistry.registerComponent('PaprPlanes', () => PaprPlanes);

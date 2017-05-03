@@ -11,7 +11,7 @@ import {
 import { StackNavigator } from 'react-navigation'
 import PostList from './PostList'
 import CounterBar from './CounterBar'
-import CreateTextPost from './CreateTextPost'
+
 
 
 
@@ -21,8 +21,8 @@ class Main extends React.Component {
     return (
         <View>
         <CounterBar/>
-        <Button onPress={() => { navigate('CreateTextPost')}} title="Picture"></Button>
-        <Button onPress={() => { navigate('CreateTextPost')}} title="URL Link"></Button>
+        <Button onPress={() => { navigate('CreatePicPost')}} title="Picture"></Button>
+        <Button onPress={() => { navigate('CreateLinkPost')}} title="URL Link"></Button>
         <Button onPress={() => { navigate('CreateTextPost')}} title="Post"></Button>
         <PostList />
         </View>

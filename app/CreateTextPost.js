@@ -15,7 +15,7 @@ class CreateTextPost extends React.Component {
   render(){
     return (
         <View>
-        <Text>hdhdhdhdh</Text>
+        <Text>TEXT POST</Text>
         </View>
     );
   }
