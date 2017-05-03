@@ -21,5 +21,8 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "rnpm": {
+   "Resources": "./Resources/Fonts"
+}
 }
