@@ -10,6 +10,7 @@ import {
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
+import Main from './Main';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -22,6 +23,8 @@ class HomeScreen extends React.Component {
 
         <Button onPress={() => { navigate('LogIn')}} title="LogIn"></Button>
         <Button onPress={() => { navigate('SignUp')}} title="SignUp"></Button>
+      {/*test button will remove later*/}
+        <Button onPress={() => { navigate('Main')}} title="Main Screen"></Button>
       </View>
     );
   }
@@ -145,6 +148,7 @@ const PaprPlanes = StackNavigator({
   Home: { screen: HomeScreen },
   LogIn: {screen: LogIn },
   SignUp: {screen: SignUp },
+  Main: {screen: Main }
 });
 
 AppRegistry.registerComponent('PaprPlanes', () => PaprPlanes);
