@@ -6,7 +6,9 @@ import {
   View,
   TextInput,
   StyleSheet,
+  Image,
 } from 'react-native';
+import style from './style';
 
 class Post extends React.Component {
   render(){

@@ -6,9 +6,10 @@ import {
   View,
   TextInput,
   StyleSheet,
-Image,
+  Image,
 } from 'react-native';
 
+import style from './style'
 
 class CounterBar extends React.Component {
   render(){

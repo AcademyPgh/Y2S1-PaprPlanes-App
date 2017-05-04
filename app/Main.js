@@ -6,13 +6,13 @@ import {
   View,
   TextInput,
   StyleSheet,
-
+  Image,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import PostList from './PostList'
 import CounterBar from './CounterBar'
 import getPost from './getPost'
-
+import style from './style'
 
 
 

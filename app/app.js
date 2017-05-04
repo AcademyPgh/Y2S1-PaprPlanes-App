@@ -6,6 +6,7 @@ import {
   View,
   TextInput,
   StyleSheet,
+  Image,
 } from 'react-native';
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
@@ -16,6 +17,7 @@ import LogIn from './LogIn';
 import CreateTextPost from './CreateTextPost'
 import CreateLinkPost from './CreateLinkPost'
 import CreatePicPost from './CreatePicPost'
+import style from './style'
 
 class HomeScreen extends React.Component {
   static navigationOptions = {

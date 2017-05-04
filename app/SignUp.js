@@ -6,8 +6,10 @@ import {
   View,
   TextInput,
   StyleSheet,
+  Image,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
+import style from './style';
 
 class SignUp extends React.Component {
   static navigationOptions = {
