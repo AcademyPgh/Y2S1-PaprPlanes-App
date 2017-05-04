@@ -14,9 +14,12 @@ class PostList extends React.Component {
     return (
         <View>
         <Text> Post List :</Text>
-        <Post/>
-        <Post/>
-        <Post/>
+        <Text>             </Text>
+        {
+        this.props.PostData.map((item,index) => {
+          return <Post information={item} key={index} />
+        })
+      }
         </View>
     );
   }

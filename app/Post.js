@@ -11,7 +11,12 @@ import {
 class Post extends React.Component {
   render(){
     return (
-        <View><Text> hi I am the post</Text></View>
+        <View >
+               <Text>{this.props.information.Type}</Text>
+                <Text>{this.props.information.AuthorName}</Text>
+                <Text>{this.props.information.SenderName}</Text>
+                <Text>-----------------------------</Text>
+      </View>
     );
   }
 
