@@ -12,6 +12,11 @@ import style from './style';
 import CreateTextPost2 from '../Resources/createtextpost2.png';
 
 class Post extends React.Component {
+  constructor(props){
+   super(props);
+   }
+
+
   render(){
     return (
         <View style = {style.PostLinkBoxMain}>
@@ -22,11 +27,10 @@ class Post extends React.Component {
                 <View style = {style.PostIcon}>
                 <Image source = {CreateTextPost2}/>
                 </View>
-      </View>
+       </View>
     );
   }
 
 }
-
 
 export default Post;

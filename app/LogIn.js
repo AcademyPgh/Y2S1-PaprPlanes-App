@@ -12,37 +12,65 @@ import {
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
+import getUser from './getUser'
 
 
 class LogIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      myText: 'hohoho',
-      gestureName: 'none',
-      backgroundColor: '#fff'
+      UserData:getUser(),
+      backgroundColor: '#fff',
+      currentEmail:"",
+      currentPassword:"",
+
     };
+    this.changeEmail = this.changeEmail.bind(this);
+    this.changePassword = this.changePassword.bind(this);
+    this.onSwipeLeft = this.onSwipeLeft.bind(this);
+    this.goLogin = this.goLogin.bind(this);
+
   }
   static navigationOptions = {
     title: 'LogIn',
   }
 
+goLogin(){
+
+for(var i=0;i<this.state.UserData.length;i++)
+   {
+
+    if ((this.state.UserData[i].Email === this.state.currentEmail)&&(this.state.UserData[i].Password === this.state.currentPassword))
+    {console.warn( "true login");
+      return true;}
+  }
+  console.warn("false login");
+  return false;
+
+}
+
+  changeEmail(email) {
+      this.setState({
+        currentEmail: email,
+      })
+    }
+
+    changePassword(pass) {
+      this.setState({
+        currentPassword: pass,
+      })
+    }
+
   onSwipeLeft(gestureState) {
-      this.setState({myText: 'You swiped left!'});
+    const { navigate } = this.props.navigation;
+
+    if (this.goLogin()){
+     navigate('Main');
     }
-
-
-
-    onSwipe(gestureName, gestureState) {
-      const {SWIPE_LEFT} = swipeDirections;
-      this.setState({gestureName: gestureName});
-      switch (gestureName) {
-        case SWIPE_LEFT:
-          this.setState({backgroundColor: 'red'});
-          break;
-      }
+    else{
+      this.setState({backgroundColor: 'red'});
     }
-
+    }
 
 
   render() {
@@ -71,19 +99,18 @@ class LogIn extends React.Component {
     return (
       <View style = {styles.container}>
         <Text>Log-In</Text>
-        <TextInput
+        <TextInput emailvalue={this.state.currentEmail} onChangeText={this.changeEmail}
         style = {styles.input}
             placeholder = 'Email'
             autoCapitalize = 'none'
          />
-         <TextInput
+         <TextInput passwordvalue={this.state.currentPassword} onChangeText={this.changePassword}
          style = {styles.input}
              placeholder = 'PassWord'
              autoCapitalize = 'none'
           />
 
           <GestureRecognizer
-                onSwipe={(direction, state) => this.onSwipe(direction, state)}
 
                 onSwipeLeft={(state) => this.onSwipeLeft(state)}
 
@@ -93,8 +120,7 @@ class LogIn extends React.Component {
                   backgroundColor: this.state.backgroundColor
                 }}
                 >
-                <Text>{this.state.myText}</Text>
-                <Text>Swipe to LogIn: {this.state.gestureName}</Text>
+                <Text>Swipe to LogIn</Text>
               </GestureRecognizer>
 
 
