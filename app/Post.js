@@ -9,15 +9,19 @@ import {
   Image,
 } from 'react-native';
 import style from './style';
+import CreateTextPost2 from '../Resources/createtextpost2.png';
 
 class Post extends React.Component {
   render(){
     return (
-        <View >
-               <Text>{this.props.information.Type}</Text>
-                <Text>{this.props.information.AuthorName}</Text>
-                <Text>{this.props.information.SenderName}</Text>
-                <Text>-----------------------------</Text>
+        <View style = {style.PostLinkBoxMain}>
+               <View style = {style.PostLinkBoxSub}>
+               <Text style = {style.SenderName}>{this.props.information.SenderName}</Text>
+                <Text style = {style.CreatorName}>{this.props.information.AuthorName}</Text>
+                </View>
+                <View style = {style.PostIcon}>
+                <Image source = {CreateTextPost2}/>
+                </View>
       </View>
     );
   }

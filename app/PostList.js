@@ -15,8 +15,6 @@ class PostList extends React.Component {
   render(){
     return (
         <View>
-        <Text> Post List :</Text>
-        <Text>             </Text>
         {
         this.props.PostData.map((item,index) => {
           return <Post information={item} key={index} />

@@ -14,12 +14,15 @@ import style from './style'
 class CounterBar extends React.Component {
   render(){
     return (
-        <View>
-<Text>left Counter </Text>
-<Image source={require('../Resources/mac&c.jpg')} style={{ width: 50, height: 50 , borderRadius:20}}/>
-<Text>Right Counter </Text>
-
+      <View style = {style.CounterBoxMain}>
+      <View style = {style.LeftContainer}>
+        <Text style = {style.CounterLeft}>Left Counter</Text>
         </View>
+      <Image source={require('../Resources/mac&c.jpg')} style={{ width: 40, height: 40 , borderRadius: 40/2}}/>
+      <View style = {style.RightContainer}>
+        <Text style = {style.CounterRight}>Right Counter</Text>
+        </View>
+    </View>
     );
   }
 

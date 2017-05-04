@@ -18,6 +18,7 @@ import CreateTextPost from './CreateTextPost'
 import CreateLinkPost from './CreateLinkPost'
 import CreatePicPost from './CreatePicPost'
 import style from './style'
+import logo from '../Resources/logo-200.png'
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -26,12 +27,23 @@ class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
-
+      <View style = {style.View}>
+      <View style = {style.Pic}>
+      <Image source = {logo}/>
+      <Text style = {style.Prompt}>Papr Plane</Text>
+      </View>
+        <View style = {style.container}>
+      <View style = {style.LogIn}>
         <Button onPress={() => { navigate('LogIn')}} title="LogIn"></Button>
+        </View>
+        <View style = {style.SignUp}>
         <Button onPress={() => { navigate('SignUp')}} title="SignUp"></Button>
+        </View>
       {/*test button will remove later*/}
+      <View>
         <Button onPress={() => { navigate('Main')}} title="Main Screen"></Button>
+        </View>
+        </View>
       </View>
     );
   }
