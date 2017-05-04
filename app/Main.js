@@ -7,12 +7,17 @@ import {
   TextInput,
   StyleSheet,
   Image,
+  TouchableOpacity
+
 } from 'react-native';
 import { StackNavigator } from 'react-navigation'
 import PostList from './PostList'
 import CounterBar from './CounterBar'
 import getPost from './getPost'
 import style from './style'
+import createtextpost2 from '../Resources/createtextpost2.png';
+import camera2 from '../Resources/camera2.png';
+import link2 from '../Resources/link2.png';
 
 
 
@@ -25,18 +30,24 @@ class Main extends React.Component {
    }
  }
 
-
-
   render(){
     const { navigate } = this.props.navigation;
     return (
-        <View>
-        <CounterBar/>
-        <Button onPress={() => { navigate('CreatePicPost')}} title="Picture"></Button>
-        <Button onPress={() => { navigate('CreateLinkPost')}} title="URL Link"></Button>
-        <Button onPress={() => { navigate('CreateTextPost')}} title="Post"></Button>
-        <PostList  PostData={this.state.PostData}/>
-        </View>
+  <View>
+    <CounterBar/>
+    <View style={style.CreatePost}>
+      <View style={style.LinkContainer}>
+      <TouchableOpacity onPress={() => { navigate('CreateLinkPost')}} ><Image source ={link2}/></TouchableOpacity>
+      </View>
+      <View style={style.PicContainer}>
+      <TouchableOpacity onPress={() => { navigate('CreatePicPost')}} ><Image source ={camera2}/></TouchableOpacity>
+      </View>
+      <View style={style.TextContainer}>
+      <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>
+      </View>
+    </View>
+      <PostList  PostData={this.state.PostData}/>
+  </View>
     );
   }
 

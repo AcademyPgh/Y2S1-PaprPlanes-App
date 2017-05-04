@@ -10,12 +10,29 @@ import {
 } from 'react-native';
 import style from './style';
 import CreateTextPost2 from '../Resources/createtextpost2.png';
+import camera2 from '../Resources/camera2.png';
+import link2 from '../Resources/link2.png';
 
 class Post extends React.Component {
   constructor(props){
    super(props);
+
+   this.chooseIcon = this.chooseIcon.bind(this);
    }
 
+chooseIcon() {
+  if (this.props.information.Type === 1) {
+    return CreateTextPost2;
+  }
+  else if (this.props.information.Type === 0){
+    return camera2;
+  }
+  else {
+    return link2;
+  }
+
+
+}
 
   render(){
     return (
@@ -25,7 +42,7 @@ class Post extends React.Component {
                 <Text style = {style.CreatorName}>{this.props.information.AuthorName}</Text>
                 </View>
                 <View style = {style.PostIcon}>
-                <Image source = {CreateTextPost2}/>
+                <Image source = {this.chooseIcon()}/>
                 </View>
        </View>
     );

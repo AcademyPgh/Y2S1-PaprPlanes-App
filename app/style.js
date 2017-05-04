@@ -201,6 +201,35 @@ default: {
     color: '#D6D6D6',
     marginRight: 15,
   },
+  CreatePost: {
+    flex: 0,
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  LinkContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFA21F',
+    paddingTop: 8,
+    paddingBottom: 8,
+  },
+  PicContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FF2BDC',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
+  TextContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#00CCFF',
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
 });
 
 
