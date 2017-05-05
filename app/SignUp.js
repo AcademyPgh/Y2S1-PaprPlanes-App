@@ -10,6 +10,9 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
+import PlaneText from './PlaneText';
+import LogInText from './LogInText';
+import textText from './textText';
 
 class SignUp extends React.Component {
   static navigationOptions = {
@@ -18,8 +21,8 @@ class SignUp extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
-        <Text>Sign-Up</Text>
+      <View style = {style.View}>
+        <PlaneText>Sign-Up</PlaneText>
         <Button onPress={() => { navigate('Home')}} title="Go back!"></Button>
       </View>
     );

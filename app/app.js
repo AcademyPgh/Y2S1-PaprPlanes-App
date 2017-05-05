@@ -7,6 +7,7 @@ import {
   TextInput,
   StyleSheet,
   Image,
+  TouchableOpacity,
 } from 'react-native';
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
@@ -19,6 +20,9 @@ import CreateLinkPost from './CreateLinkPost'
 import CreatePicPost from './CreatePicPost'
 import style from './style'
 import logo from '../Resources/logo-200.png'
+import PlaneText from './PlaneText';
+import LogInText from './LogInText';
+import textText from './textText';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -30,14 +34,14 @@ class HomeScreen extends React.Component {
       <View style = {style.View}>
       <View style = {style.Pic}>
       <Image source = {logo}/>
-      <Text style = {style.Prompt}>Papr Plane</Text>
+      <PlaneText>Papr Plane</PlaneText>
       </View>
         <View style = {style.container}>
-      <View style = {style.LogIn}>
-        <Button onPress={() => { navigate('LogIn')}} title="LogIn"></Button>
-        </View>
         <View style = {style.SignUp}>
-        <Button onPress={() => { navigate('SignUp')}} title="SignUp"></Button>
+        <TouchableOpacity onPress={() => { navigate('SignUp')}} ><PlaneText>Sign Up</PlaneText></TouchableOpacity>
+        </View>
+      <View style = {style.LogIn}>
+      <TouchableOpacity onPress={() => { navigate('LogIn')}} ><PlaneText>Log In</PlaneText></TouchableOpacity>
         </View>
       {/*test button will remove later*/}
       <View>
