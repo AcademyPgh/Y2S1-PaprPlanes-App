@@ -31,9 +31,9 @@ class LogIn extends React.Component {
     this.goLogin = this.goLogin.bind(this);
 
   }
-  static navigationOptions = {
-    title: 'LogIn',
-  }
+  // static navigationOptions = {
+  //   title: 'hohohoho',
+  // }
 
 goLogin(){
 
@@ -126,6 +126,7 @@ for(var i=0;i<this.state.UserData.length;i++)
 
         <Button onPress={() => { navigate('Home')}} title="< back"></Button>
       </View>
+
     );
   }
 }

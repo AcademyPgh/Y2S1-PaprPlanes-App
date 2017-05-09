@@ -18,6 +18,8 @@ import style from './style'
 import createtextpost2 from '../Resources/createtextpost2.png';
 import camera2 from '../Resources/camera2.png';
 import link2 from '../Resources/link2.png';
+import OurCamera from './OurCamera';
+import MyCameraRoll from './MyCameraRoll';
 
 
 
@@ -40,7 +42,7 @@ class Main extends React.Component {
       <TouchableOpacity onPress={() => { navigate('CreateLinkPost')}} ><Image source ={link2}/></TouchableOpacity>
       </View>
       <View style={style.PicContainer}>
-      <TouchableOpacity onPress={() => { navigate('CreatePicPost')}} ><Image source ={camera2}/></TouchableOpacity>
+      <TouchableOpacity onPress={() => { navigate('MyCameraRoll')}} ><Image source ={camera2}/></TouchableOpacity>
       </View>
       <View style={style.TextContainer}>
       <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>

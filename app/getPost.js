@@ -13,7 +13,7 @@ export default () => {
     {
       id: 1,
       AuthorName: "Json Johnson",
-      SenderName: "ruby",
+      SenderName: "Ruby Makhol",
       Type: 1,
       Caption: "Ohhh yeah json in the house",
       Content: "this is a cool text post",

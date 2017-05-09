@@ -258,6 +258,15 @@ const styles = StyleSheet.create ({
     fontSize: 16,
     color: '#D6D6D6',
   },
+  tabtab: {
+    fontFamily: 'Avenir Next',
+    fontSize: 16,
+    color: '#D6D6D6',
+    backgroundColor: '#373435',
+    width:250,
+    height:250,
+    marginRight: 15,
+  },
 });
 
 

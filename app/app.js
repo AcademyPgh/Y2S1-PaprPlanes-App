@@ -23,6 +23,10 @@ import logo from '../Resources/logo-200.png'
 import PlaneText from './PlaneText';
 import LogInText from './LogInText';
 import textText from './textText';
+import SignUp1 from './SignUp1';
+import SignUp2 from './SignUp2';
+import OurCamera from './OurCamera';
+import MyCameraRoll from './MyCameraRoll'
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -61,6 +65,10 @@ const PaprPlanes = StackNavigator({
   CreateTextPost: { screen: CreateTextPost },
   CreateLinkPost: { screen: CreateLinkPost },
   CreatePicPost: { screen: CreatePicPost },
+  SignUp1: { screen: SignUp1 },
+  SignUp2: { screen: SignUp2 },
+  OurCamera:{screen:OurCamera},
+  MyCameraRoll:{screen:MyCameraRoll},
 });
 
 AppRegistry.registerComponent('PaprPlanes', () => PaprPlanes);

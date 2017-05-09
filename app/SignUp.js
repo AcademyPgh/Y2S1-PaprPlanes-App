@@ -13,6 +13,9 @@ import style from './style';
 import PlaneText from './PlaneText';
 import LogInText from './LogInText';
 import textText from './textText';
+import SignUp1 from './SignUp1';
+import SignUp2 from './SignUp2';
+
 
 class SignUp extends React.Component {
   static navigationOptions = {
@@ -23,7 +26,7 @@ class SignUp extends React.Component {
     return (
       <View style = {style.View}>
         <PlaneText>Sign-Up</PlaneText>
-        <Button onPress={() => { navigate('Home')}} title="Go back!"></Button>
+        <Button onPress={() => { navigate('SignUp2')}} title="Go Sign-Up!"></Button>
       </View>
     );
   }
