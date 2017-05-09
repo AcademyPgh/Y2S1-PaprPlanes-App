@@ -21,8 +21,9 @@ import CreatePicPost from './CreatePicPost'
 import style from './style'
 import logo from '../Resources/logo-200.png'
 import PlaneText from './PlaneText';
-import LogInText from './LogInText';
-import textText from './textText';
+import {LogInText, textText} from './textText';
+import mail from '../Resources/mail.png';
+import password from '../Resources/password.png';
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -34,7 +35,7 @@ class HomeScreen extends React.Component {
       <View style = {style.View}>
       <View style = {style.Pic}>
       <Image source = {logo}/>
-      <PlaneText>Papr Plane</PlaneText>
+      <PlaneText>PaprPlane</PlaneText>
       </View>
         <View style = {style.container}>
         <View style = {style.SignUp}>

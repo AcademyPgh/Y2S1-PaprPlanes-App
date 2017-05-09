@@ -13,14 +13,19 @@ import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
 import getUser from './getUser'
-
+import PlaneText from './PlaneText';
+import {LogInText, textText} from './textText';
+import logo from '../Resources/logo-200.png';
+import mail from '../Resources/mail.png';
+import password from '../Resources/password.png';
+import StackNavigation from './StackNavigator';
 
 class LogIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       UserData:getUser(),
-      backgroundColor: '#fff',
+      //backgroundColor: '#fff',
       currentEmail:"",
       currentPassword:"",
 
@@ -33,7 +38,7 @@ class LogIn extends React.Component {
   }
   static navigationOptions = {
     title: 'LogIn',
-  }
+}
 
 goLogin(){
 
@@ -79,53 +84,50 @@ for(var i=0;i<this.state.UserData.length;i++)
      velocityThreshold: 0.3,
      directionalOffsetThreshold: 80
    };
-
-    const styles = StyleSheet.create ({
-   container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent:'center',
-      paddingTop: 200
-   },
-   input: {
-      margin: 15,
-      height: 40,
-      borderColor: 'grey',
-      borderWidth: 1
-   }
-
-})
+//    //
+  //   const styles = StyleSheet.create ({
+  //  container: {
+  //     flex: 1,
+  //     alignItems: 'center',
+  //     justifyContent:'center',
+  //     paddingTop: 200
+  //  },
+//   //  input: {
+//   //     margin: 15,
+//   //     height: 40,
+//   //     borderColor: 'grey',
+//   //     borderWidth: 1
+//   //  }
+//
+// })
     const { navigate } = this.props.navigation;
     return (
-      <View style = {styles.container}>
-        <Text>Log-In</Text>
-        <TextInput emailvalue={this.state.currentEmail} onChangeText={this.changeEmail}
-        style = {styles.input}
-            placeholder = 'Email'
-            autoCapitalize = 'none'
-         />
-         <TextInput passwordvalue={this.state.currentPassword} onChangeText={this.changePassword}
-         style = {styles.input}
-             placeholder = 'PassWord'
-             autoCapitalize = 'none'
-          />
-
+      <View style = {style.View2}>
+      <View style = {style.LogIn2}>
+        <PlaneText>Log In</PlaneText>
+        </View>
+        <Image style = {style.LogInLogo} source = {logo}/>
+        <View style = {style.Email}>
+        <View style = {style.container4}>
+        <Image source = {mail}/>
+        </View>
+        <TextInput style = {style.TextField2} placeholder = '  Email: ' autoCapitalize = 'none'/>
+        </View>
+        <View style = {style.Email}>
+        <View style = {style.container4}>
+        <Image source = {password}/>
+        </View>
+        <TextInput style = {style.TextField2} placeholder = '  Password: ' autoCapitalize = 'none' />
+          </View>
+          <View style = {style.swipe}>
           <GestureRecognizer
-
                 onSwipeLeft={(state) => this.onSwipeLeft(state)}
-
                 config={config}
-                style={{
-                  flex: 1,
-                  backgroundColor: this.state.backgroundColor
-                }}
                 >
-                <Text>Swipe to LogIn</Text>
+                <LogInText>&#10094; Swipe to LogIn </LogInText>
               </GestureRecognizer>
-
-
-        <Button onPress={() => { navigate('Home')}} title="< back"></Button>
-      </View>
+            </View>
+            </View>
     );
   }
 }
