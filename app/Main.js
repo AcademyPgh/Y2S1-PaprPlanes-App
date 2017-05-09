@@ -49,6 +49,7 @@ class Main extends React.Component {
       </View>
     </View>
       <PostList  PostData={this.state.PostData}/>
+
   </View>
     );
   }

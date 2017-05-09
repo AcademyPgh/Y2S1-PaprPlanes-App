@@ -11,10 +11,13 @@ import {
 import { StackNavigator } from 'react-navigation';
 import style from './style';
 import PlaneText from './PlaneText';
-import LogInText from './LogInText';
-import textText from './textText';
+
+
 import SignUp1 from './SignUp1';
 import SignUp2 from './SignUp2';
+
+
+import {LogInText, textText} from './textText';
 
 
 class SignUp extends React.Component {
