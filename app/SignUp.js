@@ -11,8 +11,7 @@ import {
 import { StackNavigator } from 'react-navigation';
 import style from './style';
 import PlaneText from './PlaneText';
-import LogInText from './LogInText';
-import textText from './textText';
+import {LogInText, textText} from './textText';
 
 class SignUp extends React.Component {
   static navigationOptions = {

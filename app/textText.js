@@ -2,7 +2,7 @@ import React from 'react';
 import {Text} from 'react-native';
 import style from './style';
 
-class textText extends React.Component {
+export class textText extends React.Component {
   render (){
     return (<Text style = {style.textText}>{
       this.props.children
@@ -10,5 +10,11 @@ class textText extends React.Component {
     </Text>)
   }
 }
-
-export default textText;
+export class LogInText extends React.Component {
+  render (){
+    return (<Text style = {style.LogInText}>{
+      this.props.children
+    }
+    </Text>)
+  }
+}

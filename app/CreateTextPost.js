@@ -14,54 +14,31 @@ import {
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
+import PlaneText from './PlaneText';
+import {LogInText, textText} from './textText';
 
 class CreateTextPost extends React.Component {
   render(){
-  const { navigate } = this.props.navigation;
 
-  const styles = StyleSheet.create ({
-   container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent:'center',
-      paddingTop: 25,
+const { navigate } = this.props.navigation;
 
-
-   },
-      input1: {
-      margin: 15,
-      height: 40,
-      borderColor: 'grey',
-      borderWidth: 1,
-
-   },
-    input2: {
-      margin: 15,
-      height: 100,
-      borderColor: 'grey',
-      borderWidth: 1,
-      marginBottom: 75,
-   }
-
-})
 return (
-
-  <View style = {styles.container}>
-
-    <TextInput style = {styles.input1}
-        placeholder = 'Caption'
-        autoCapitalize = 'none'/>
-
-    <TextInput style = {styles.input2}
-      placeholder = 'Content'
-      autoCapitalize = 'none' />
-      <View>
-      <TouchableOpacity onPress={() => { navigate('PostPassMain')}}><Text>Submit</Text></TouchableOpacity>
-      </View>
+  <View style = {style.View3}>
+  <View style = {style.CounterBoxMain}>
+  <View style = {style.LeftContainer}>
+  <LogInText> &#10094; </LogInText>
   </View>
-
-
-
+    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('SignUp')}} ><LogInText>Log In</LogInText></TouchableOpacity>
+    <View style = {style.RightContainer}></View>
+  </View>
+  <View style = {style.container2}>
+  <TextInput style = {style.TextField} placeholder = 'Text' autoCapitalize = 'none'/>
+  <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
+  </View>
+  <View style = {style.container}>
+  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain')}} ><LogInText>Submit</LogInText></TouchableOpacity>
+</View>
+  </View>
 
     );
   }
