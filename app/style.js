@@ -258,6 +258,40 @@ const styles = StyleSheet.create ({
     fontSize: 16,
     color: '#D6D6D6',
   },
+  CheckIcon: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginLeft: 15,
+    width: 30,
+    height: 30,
+    resizeMode: 'contain',
+  },
+  FriendPass: {
+    flex: 6,
+    textAlign: 'left',
+    justifyContent: 'center',
+    fontFamily: 'Avenir Next',
+    fontSize: 24,
+    color: '#000000',
+  },
+  FriendBoxMain: {
+    flex: 0,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 9,
+    borderWidth: 2,
+    borderColor: '#5A5858',
+    marginTop: 15,
+    marginRight: 15,
+    marginLeft: 15,
+    paddingTop: 8,
+    paddingRight: 8,
+    paddingLeft: 8,
+    paddingBottom: 8,
+  },
+
 });
 
 

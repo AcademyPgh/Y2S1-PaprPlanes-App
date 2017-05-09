@@ -23,6 +23,7 @@ import logo from '../Resources/logo-200.png'
 import PlaneText from './PlaneText';
 import LogInText from './LogInText';
 import textText from './textText';
+import PostPassMain from './PostPassMain'
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -61,6 +62,7 @@ const PaprPlanes = StackNavigator({
   CreateTextPost: { screen: CreateTextPost },
   CreateLinkPost: { screen: CreateLinkPost },
   CreatePicPost: { screen: CreatePicPost },
+  PostPassMain: { screen: PostPassMain },
 });
 
 AppRegistry.registerComponent('PaprPlanes', () => PaprPlanes);
