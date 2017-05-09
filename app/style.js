@@ -588,8 +588,6 @@ const styles = StyleSheet.create ({
     paddingLeft: 8,
     paddingBottom: 8,
   },
-
-
   StackNavigator: {
     //flex: 1,
     width: 400,
