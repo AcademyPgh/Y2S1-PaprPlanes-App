@@ -9,8 +9,18 @@
   "dependencies": {
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
+
+    "react-native-animated-tabs": "^1.1.0",
+    "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
+    "react-native-scrollable-tab-view": "^0.6.5",
     "react-native-swipe-gestures": "^1.0.2",
     "react-native-swiper": "^1.5.4",
+    "react-native-tab-navigator": "^0.3.3",
+    "react-native-tab-view": "0.0.62",
+
+    "react-native-checkbox": "^1.1.0",
+    "react-native-vector-icons": "^4.1.1",
+
     "react-navigation": "^1.0.0-beta.9"
   },
   "devDependencies": {
@@ -23,6 +33,6 @@
     "preset": "react-native"
   },
   "rnpm": {
-   "Resources": "./Resources/Fonts"
-}
+    "Resources": "./Resources/Fonts"
+  }
 }

@@ -11,14 +11,15 @@ import {
 } from 'react-native';
 import Post from './Post'
 import style from './style'
+import FriendPass from './FriendPass'
 
-class PostList extends React.Component {
+class FriendPassList extends React.Component {
   render(){
     return (
         <ScrollView>
         {
-        this.props.PostData.map((item,index) => {
-          return <Post information={item} key={index} />
+        this.props.FriendList.map((item,index) => {
+          return <FriendPass FriendList={item} key={index} toggle={this.props.toggle}/>
         })
       }
     </ScrollView>
@@ -28,4 +29,4 @@ class PostList extends React.Component {
 }
 
 
-export default PostList;
+export default FriendPassList;
