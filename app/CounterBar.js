@@ -18,7 +18,7 @@ class CounterBar extends React.Component {
       <View style = {style.LeftContainer}>
         <Text style = {style.CounterLeft}>Left Counter</Text>
         </View>
-      <Image source={require('../Resources/mac&c.jpg')} style={{ width: 40, height: 40 , borderRadius: 40/2}}/>
+      <Image source={require('../Resources/mac&c.jpg')} style={style.ProfilePic}/>
       <View style = {style.RightContainer}>
         <Text style = {style.CounterRight}>Right Counter</Text>
         </View>

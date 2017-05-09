@@ -31,10 +31,11 @@ class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
+      
       <View style = {style.View}>
       <View style = {style.Pic}>
-      <Image source = {logo}/>
-      <PlaneText>Papr Plane</PlaneText>
+        <Image source = {logo}/>
+        <PlaneText>Papr Plane</PlaneText>
       </View>
         <View style = {style.container}>
         <View style = {style.SignUp}>
@@ -49,6 +50,7 @@ class HomeScreen extends React.Component {
         </View>
         </View>
       </View>
+
     );
   }
 }
