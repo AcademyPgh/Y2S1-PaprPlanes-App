@@ -22,6 +22,12 @@ import FriendRequest from './FriendRequest';
 import Search from './Search';
 import OurCamera from './OurCamera';
 import MyCameraRoll from './MyCameraRoll';
+import SearchPage from './SearchPage';
+// import camera from '../Resources/camera.svg';
+// import SVGImage from 'react-native-svg-image';
+// import cameraLg from '../Resources/cameraLg.png';
+
+
 
 class Main extends React.Component {
   constructor(props){
@@ -48,9 +54,11 @@ class Main extends React.Component {
       <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>
       </View>
     </View>
-
       <PostList  PostData={this.state.PostData}/>
       <FriendRequest/>
+      <View>
+        <Button onPress={() => { navigate('SearchPage')}} title="SearchPage"></Button>
+        </View>
   </View>
     );
   }
