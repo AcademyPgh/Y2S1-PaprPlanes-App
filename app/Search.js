@@ -27,9 +27,7 @@ class Search extends React.Component {
       <View style={style.SearchThree}>
         <TextInput style = {style.SearchText} placeholder = 'Search' placeholderTextColor = '#D6D6D6' autoCapitalize = 'none' ></TextInput>
       </View>
-      {/* <View style={style.SearchIcon}> */}
         <TouchableOpacity onPress={() => { navigate('')}} ><Image source={search} style={style.SearchIcon}/></TouchableOpacity>
-      {/* </View> */}
       </View>
     </View>
     );

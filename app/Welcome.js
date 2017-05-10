@@ -7,13 +7,15 @@ import {
   TextInput,
   StyleSheet,
   Image,
+  TouchableOpacity,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
 import PlaneText from './PlaneText';
 import SignUp1 from './SignUp1';
 import SignUp2 from './SignUp2';
-import videoFPO from '../Resources/videoFPO.png';
+import videoFPO2 from '../Resources/videoFPO2.jpg';
+import arrowcontinue from '../Resources/arrowcontinue.png';
 
 
 import {LogInText, textText} from './textText';
@@ -28,11 +30,14 @@ class Welcome extends React.Component {
     return (
       <View style = {style.VideoView}>
         <View style={style.Video}>
-          <Image source={videoFPO}/>
+          <Image source={videoFPO2}/>
         </View>
-        <View style = {style.VideoView}>
+        <View style = {style.welcomeTitle}>
           <PlaneText>Welcome to PaprPlane.</PlaneText>
-          <Text style = {style.UserName}>Let's show you around.</Text>
+          <Text style = {style.PlaneText2}>Let's show you around.</Text>
+        </View>
+        <View style = {style.welcomeContinue}>
+          <TouchableOpacity onPress={() => { navigate('')}} ><Image source={arrowcontinue}/></TouchableOpacity>
         </View>
       </View>
     );

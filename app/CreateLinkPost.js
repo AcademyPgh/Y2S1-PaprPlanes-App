@@ -33,7 +33,7 @@ return (
   <View style = {style.container2}>
   <TextInput style = {style.TextField} placeholder = 'Link' autoCapitalize = 'none'/>
   <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
-  <TextInput style = {style.TextField3} placeholder = 'Web Preview' autoCapitalize = 'none' />
+  <TextInput style = {style.WebPreview} placeholder = 'Web Preview' autoCapitalize = 'none' />
   </View>
   <View style = {style.container}>
   <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain')}} ><LogInText>Submit</LogInText></TouchableOpacity>
