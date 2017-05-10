@@ -384,7 +384,6 @@ const styles = StyleSheet.create ({
     paddingLeft: 8,
     paddingBottom: 8,
   },
-
   PostLinkBoxSub: {
     flex: 5,
     flexDirection: 'column',
@@ -604,6 +603,24 @@ const styles = StyleSheet.create ({
     paddingRight: 8,
     paddingLeft: 8,
     paddingBottom: 8,
+  },
+  VideoView: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: '#373435',
+    marginTop: 0,
+  },
+  Video: {
+    flex: 0,
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: 0,
+    marginRight: 50,
+    marginLeft: 50,
+    resizeMode: 'contain',
+    // width: 200,
+    // height: 200,
   },
   StackNavigator: {
     //flex: 1,

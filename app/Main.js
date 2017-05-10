@@ -23,6 +23,7 @@ import Search from './Search';
 import OurCamera from './OurCamera';
 import MyCameraRoll from './MyCameraRoll';
 import SearchPage from './SearchPage';
+import Welcome from './Welcome';
 // import camera from '../Resources/camera.svg';
 // import SVGImage from 'react-native-svg-image';
 // import cameraLg from '../Resources/cameraLg.png';
@@ -59,6 +60,9 @@ class Main extends React.Component {
       <View>
         <Button onPress={() => { navigate('SearchPage')}} title="SearchPage"></Button>
         </View>
+        <View>
+          <Button onPress={() => { navigate('Welcome')}} title="Welcome"></Button>
+          </View>
   </View>
     );
   }

@@ -37,6 +37,7 @@ import {LogInText, textText} from './textText';
 import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
 import SearchPage from './SearchPage';
+import Welcome from './Welcome';
 
 
 class HomeScreen extends React.Component {
@@ -85,6 +86,7 @@ const PaprPlanes = StackNavigator({
   MyCameraRoll: {screen: MyCameraRoll},
   PostPassMain: { screen: PostPassMain },
   SearchPage: { screen: SearchPage },
+  Welcome: { screen: Welcome },
 
 });
 
