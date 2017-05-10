@@ -510,7 +510,7 @@ const styles = StyleSheet.create ({
   },
   LogInText: {
     fontFamily: 'Avenir Next',
-    fontSize: 16,
+    fontSize: 24,
     color: '#FFFFFF',
     textAlign: 'center',
   },
@@ -649,6 +649,18 @@ const styles = StyleSheet.create ({
     flex: 2,
     alignItems: 'center',
     paddingTop: 40,
+  },
+  PostCreateHeader: {
+    flex: 0,
+    flexDirection: 'row',
+    backgroundColor: '#373435',
+    height: 50,
+  },
+  LeftArrow: {
+    flex: 1,
+    resizeMode: 'contain',
+    width: 10,
+    paddingLeft: 12,
   },
   StackNavigator: {
     //flex: 1,

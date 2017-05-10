@@ -21,11 +21,13 @@ class CreatePicPost extends React.Component {
 
 return (
   <View style = {style.View3}>
-  <View style = {style.CounterBoxMain}>
-  <View style = {style.LeftContainer}>
-  <LogInText> &#10094; </LogInText>
-  </View>
-    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('SignUp')}} ><LogInText>Log In</LogInText></TouchableOpacity>
+  <View style = {style.PostCreateHeader}>
+    <View style = {style.LeftContainer}>
+      <View style = {style.LeftArrow}>
+        <Image source={backarrow} style={style.LeftArrow}/>
+      </View>
+    </View>
+    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('')}} ><LogInText>Log In</LogInText></TouchableOpacity>
     <View style = {style.RightContainer}></View>
   </View>
   <View style = {style.container}>

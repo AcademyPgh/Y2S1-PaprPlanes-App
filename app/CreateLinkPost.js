@@ -8,7 +8,6 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-
 } from 'react-native';
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
@@ -16,6 +15,8 @@ import { StackNavigator } from 'react-navigation';
 import style from './style';
 import PlaneText from './PlaneText';
 import {LogInText, textText} from './textText';
+import backarrow from '../Resources/backarrow.png';
+import closeIcon from '../Resources/closeIcon.png';
 
 class CreateLinkPost extends React.Component {
   render(){
@@ -23,11 +24,13 @@ class CreateLinkPost extends React.Component {
 const { navigate } = this.props.navigation;
 return (
   <View style = {style.View3}>
-  <View style = {style.CounterBoxMain}>
+  <View style = {style.PostCreateHeader}>
   <View style = {style.LeftContainer}>
-  <LogInText> &#10094; </LogInText>
+    <View style = {style.LeftArrow}>
+      <Image source={backarrow} style={style.LeftArrow}/>
+    </View>
   </View>
-    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('SignUp')}} ><LogInText>Log In</LogInText></TouchableOpacity>
+    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('')}} ><LogInText>Link Post</LogInText></TouchableOpacity>
     <View style = {style.RightContainer}></View>
   </View>
   <View style = {style.container2}>
