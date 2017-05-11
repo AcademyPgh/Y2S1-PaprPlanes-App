@@ -11,15 +11,11 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
-import PlaneText from './PlaneText';
 import SignUp1 from './SignUp1';
 import SignUp2 from './SignUp2';
 import videoFPO2 from '../Resources/videoFPO2.jpg';
 import arrowcontinue from '../Resources/arrowcontinue.png';
-
-
-import {LogInText, textText} from './textText';
-
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 
 class Welcome extends React.Component {
   static navigationOptions = {

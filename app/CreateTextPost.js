@@ -38,15 +38,14 @@ class CreateTextPost extends React.Component {
   this.setState({
     currentCaption: caption,
   })
-
-class CreateTextPost extends React.Component {
-  static navigationOptions = {
+}
+static navigationOptions = {
     headerStyle:{ backgroundColor: '#373435'},
     headerTitleStyle:{ color: '#FFF'},
     title: 'Text Post',
     backButton: '#FFF',
 }
-  render(){
+render(){
 
 const { navigate } = this.props.navigation;
 

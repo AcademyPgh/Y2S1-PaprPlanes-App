@@ -40,9 +40,6 @@ class CreateLinkPost extends React.Component {
   })
 }
 
- render(){
-
-class CreateLinkPost extends React.Component {
   static navigationOptions = {
     headerStyle:{ backgroundColor: '#373435'},
     headerTitleStyle:{ color: '#FFF'},
