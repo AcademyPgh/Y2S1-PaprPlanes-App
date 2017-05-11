@@ -7,7 +7,7 @@ import {
   TextInput,
   StyleSheet,
   Image,
-  TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native';
 import style from './style';
 import CreateTextPost2 from '../Resources/createtextpost2.png';
@@ -40,13 +40,13 @@ chooseIcon() {
 }
 
   render(){
-const {navigate} = this.props.navigation;
+const {navigate}= this.props.navigation;
     return (
 <View>
 
 
         <View style = {style.PostLinkBoxMain}>
-          <TouchableHighlight onPress={() => {this.props.navigate('ViewPost', { information: this.props.information})} } >
+          <TouchableOpacity onPress={() => {navigate('ViewPost', {info: this.props.information})} } >
               <View style = {style.PostLinkBoxSub}>
 
                  <Text style = {style.SenderName}>{this.props.information.SenderName}</Text>
@@ -56,8 +56,8 @@ const {navigate} = this.props.navigation;
               <View style = {style.PostIcon}>
                   <Image source = {this.chooseIcon()}/>
               </View>
-              {/* <ViewPost information={this.props.information} navigate={navigate} /> */}
-               </TouchableHighlight>
+
+            </TouchableOpacity>
        </View>
 
 

@@ -11,14 +11,16 @@ import {
 } from 'react-native';
 import Post2 from './Post2'
 import style from './style'
+import { StackNavigator } from 'react-navigation';
 
 class PostList extends React.Component {
   render(){
+
     return (
         <ScrollView>
         {
         this.props.PostData.map((item,index) => {
-          return <Post2 information={item} key={index} navigation={navigate}/>
+          return <Post2 information={item} key={index} navigation={this.props.navigation}/>
         })
       }
     </ScrollView>

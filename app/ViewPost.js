@@ -7,7 +7,7 @@ import {
   TextInput,
   StyleSheet,
   Image,
-  TouchableOpacity,
+  TouchableHighlight,
 
 } from 'react-native';
 
@@ -22,22 +22,21 @@ class ViewPost extends React.Component {
   render(){
 
 const { navigate } = this.props.navigation;
+const { params } = this.props.navigation.state;
 
 return (
   <View style = {style.View3}>
     <TouchableHighlight onPress={() => {navigate('Main')} } >
         <View style = {style.PostLinkBoxSub}>
 
-           <Text style = {style.SenderName}>{this.props.information.SenderName}</Text>
-           <Text style = {style.CreatorName}>{this.props.information.AuthorName}</Text>
-           <Text style = {style.CreatorName}>{this.props.information.Caption}</Text>
-           <Text style = {style.CreatorName}>{this.props.information.Text}</Text>
+           <Text style = {style.SenderName}>{params.SenderName}</Text>
+           <Text style = {style.CreatorName}>{params.AuthorName}</Text>
+           <Text style = {style.CreatorName}>{params.Caption}</Text>
+           <Text style = {style.CreatorName}>{params.Text}</Text>
 
         </View>
-        <View style = {style.PostIcon}>
-            <Image source = {this.chooseIcon()}/>
-        </View>
-        {/* <ViewPost information={this.props.information} navigate={navigate} /> */}
+        
+
          </TouchableHighlight>
   </View>
 

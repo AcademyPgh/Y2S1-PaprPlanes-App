@@ -48,6 +48,7 @@ class CreateLinkPost extends React.Component {
   render(){
 
 const { navigate } = this.props.navigation;
+const { params } = this.props.navigation.state;
 return (
   <View style = {style.View3}>
   <View style = {style.PostCreateHeader}>

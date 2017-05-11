@@ -10,11 +10,11 @@ import {
   TouchableOpacity
 
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import PostList from './PostList';
-import CounterBar from './CounterBar';
-import getPost from './getPost';
-import style from './style';
+import { StackNavigator } from 'react-navigation'
+import PostList from './PostList'
+import CounterBar from './CounterBar'
+import getPost from './getPost'
+import style from './style'
 import createtextpost2 from '../Resources/createtextpost2.png';
 import camera2 from '../Resources/camera2.png';
 import link2 from '../Resources/link2.png';
@@ -22,17 +22,6 @@ import FriendRequest from './FriendRequest';
 import Search from './Search';
 import OurCamera from './OurCamera';
 import MyCameraRoll from './MyCameraRoll';
-
-import CreatePicPost from './CreatePicPost';
-
-import SearchPage from './SearchPage';
-import Welcome from './Welcome';
-// import camera from '../Resources/camera.svg';
-// import SVGImage from 'react-native-svg-image';
-// import cameraLg from '../Resources/cameraLg.png';
-
-
-
 
 class Main extends React.Component {
   constructor(props){
@@ -53,20 +42,15 @@ class Main extends React.Component {
       <TouchableOpacity onPress={() => { navigate('CreateLinkPost')}} ><Image source ={link2}/></TouchableOpacity>
       </View>
       <View style={style.PicContainer}>
-      <TouchableOpacity onPress={() => { navigate('CreatePicPost')}} ><Image source ={camera2}/></TouchableOpacity>
+      <TouchableOpacity onPress={() => { navigate('MyCameraRoll')}} ><Image source ={camera2}/></TouchableOpacity>
       </View>
       <View style={style.TextContainer}>
       <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>
       </View>
     </View>
-      <PostList  PostData={this.state.PostData}/>
+
+      <PostList  PostData={this.state.PostData} navigation={this.props.navigation}/>
       <FriendRequest/>
-      <View>
-        <Button onPress={() => { navigate('SearchPage')}} title="SearchPage"></Button>
-        </View>
-        <View>
-          <Button onPress={() => { navigate('Welcome')}} title="Welcome"></Button>
-          </View>
   </View>
     );
   }
