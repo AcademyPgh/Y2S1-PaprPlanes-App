@@ -10,11 +10,11 @@ import {
   TouchableOpacity
 
 } from 'react-native';
-import { StackNavigator } from 'react-navigation'
-import PostList from './PostList'
-import CounterBar from './CounterBar'
-import getPost from './getPost'
-import style from './style'
+import { StackNavigator } from 'react-navigation';
+import PostList from './PostList';
+import CounterBar from './CounterBar';
+import getPost from './getPost';
+import style from './style';
 import createtextpost2 from '../Resources/createtextpost2.png';
 import camera2 from '../Resources/camera2.png';
 import link2 from '../Resources/link2.png';

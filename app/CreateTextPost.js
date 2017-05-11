@@ -20,6 +20,27 @@ import backarrow from '../Resources/backarrow.png';
 
 
 class CreateTextPost extends React.Component {
+  constructor(props){
+   super(props);
+
+   this.state = {
+    currentCaption: '',
+    currentText: '',
+   }
+   this.changeText = this.changeText.bind(this);
+   this.changeCaption = this.changeCaption.bind(this);
+ }
+
+ changeText(text){
+  this.setState({
+    currentText: text,
+  })
+}
+ changeCaption(caption){
+  this.setState({
+    currentCaption: caption,
+  })
+}
   render(){
 
 const { navigate } = this.props.navigation;
@@ -40,7 +61,7 @@ return (
   <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
   </View>
   <View style = {style.container}>
-  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain')}} ><LogInText>Submit</LogInText></TouchableOpacity>
+  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {postInfo: this.state})}} ><LogInText>Submit</LogInText></TouchableOpacity>
 </View>
   </View>
     );

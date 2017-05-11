@@ -19,7 +19,29 @@ import backarrow from '../Resources/backarrow.png';
 import closeIcon from '../Resources/closeIcon.png';
 
 class CreateLinkPost extends React.Component {
-  render(){
+  constructor(props){
+   super(props);
+
+   this.state = {
+    currentCaption: '',
+    currentLink: '',
+   }
+   this.changeLink = this.changeLink.bind(this);
+   this.changeCaption = this.changeCaption.bind(this);
+ }
+
+ changeLink(link){
+  this.setState({
+    currentLink: link,
+  })
+}
+ changeCaption(caption){
+  this.setState({
+    currentCaption: caption,
+  })
+}
+
+ render(){
 
 const { navigate } = this.props.navigation;
 return (
@@ -34,12 +56,12 @@ return (
     <View style = {style.RightContainer}></View>
   </View>
   <View style = {style.container2}>
-  <TextInput style = {style.TextField} placeholder = 'Link' autoCapitalize = 'none'/>
-  <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
+  <TextInput style = {style.TextField}  onChangeText = {this.changeLink} placeholder = 'Link' autoCapitalize = 'none'/>
+  <TextInput style = {style.TextField} onChangeText = {this.changeCaption} placeholder = 'Caption' autoCapitalize = 'none' />
   <TextInput style = {style.WebPreview} placeholder = 'Web Preview' autoCapitalize = 'none' />
   </View>
   <View style = {style.container}>
-  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain')}} ><LogInText>Submit</LogInText></TouchableOpacity>
+  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {postInfo: this.state})}} ><LogInText>Submit</LogInText></TouchableOpacity>
 </View>
   </View>
 
