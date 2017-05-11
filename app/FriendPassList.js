@@ -14,6 +14,11 @@ import style from './style'
 import FriendPass from './FriendPass'
 
 class FriendPassList extends React.Component {
+  static navigationOptions = {
+    headerStyle:{ backgroundColor: '#FFA21F'},
+    headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
+    title: 'Friends',
+}
   render(){
     return (
         <ScrollView>

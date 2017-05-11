@@ -15,18 +15,19 @@ import getPost from './getPost'
 import getFriend from './getFriend'
 import style from './style'
 import FriendPassList from './FriendPassList'
-import {LogInText, textText} from './textText';
 import backarrow from '../Resources/backarrow.png';
 import closeIcon from '../Resources/closeIcon.png';
 import swipeArrow from '../Resources/swipeArrow.png';
 import {setUserId, getUserId} from './globalSet';
 import getPostAccess from './getPostAccess';
-
-
-
-
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 
 class PostPassMain extends React.Component {
+  static navigationOptions = {
+    headerStyle:{ backgroundColor: '#FFA21F'},
+    headerTitleStyle:{ color: '#FFF'},
+    title: 'Friends',
+}
   constructor(props){
    super(props);
 

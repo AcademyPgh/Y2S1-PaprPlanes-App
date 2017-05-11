@@ -28,8 +28,9 @@ return (
       </View>
     </View>
     <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('')}} ><LogInText>Log In</LogInText></TouchableOpacity>
-    <View style = {style.RightContainer}></View>
-  </View>
+  <View style = {style.RightContainer}>
+</View>
+</View>
   <View style = {style.container}>
   <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('Main')}} ><LogInText>Send</LogInText></TouchableOpacity>
 </View>

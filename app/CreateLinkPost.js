@@ -13,8 +13,7 @@ import {
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
-import PlaneText from './PlaneText';
-import {LogInText, textText} from './textText';
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 import backarrow from '../Resources/backarrow.png';
 import closeIcon from '../Resources/closeIcon.png';
 
@@ -42,6 +41,14 @@ class CreateLinkPost extends React.Component {
 }
 
  render(){
+
+class CreateLinkPost extends React.Component {
+  static navigationOptions = {
+    headerStyle:{ backgroundColor: '#373435'},
+    headerTitleStyle:{ color: '#FFF'},
+    title: 'Link Post',
+}
+  render(){
 
 const { navigate } = this.props.navigation;
 return (

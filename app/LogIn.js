@@ -13,13 +13,12 @@ import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
 import getUser from './getUser'
-import PlaneText from './PlaneText';
-import {LogInText, textText} from './textText';
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 import logo from '../Resources/logo-200.png';
 import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
-import StackNavigation from './StackNavigator';
 import {setUserId, getUserId} from './globalSet';
+import mac from '../Resources/mac&c.jpg';
 
 class LogIn extends React.Component {
   constructor(props) {
@@ -39,7 +38,10 @@ class LogIn extends React.Component {
   }
 
   static navigationOptions = {
-    title: 'LogIn',
+    headerStyle:{ backgroundColor: '#00CCFF'},
+    headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
+    headerButtonStyle: {color: '#FFF'},
+    title: 'Log In',
 }
 
 
@@ -110,22 +112,20 @@ for(var i=0;i<this.state.UserData.length;i++)
 // })
     const { navigate } = this.props.navigation;
     return (
+
       <View style = {style.View2}>
-      <View style = {style.LogIn2}>
-        <PlaneText>Log In</PlaneText>
-        </View>
         <Image style = {style.LogInLogo} source = {logo}/>
         <View style = {style.Email}>
         <View style = {style.container4}>
         <Image source = {mail}/>
         </View>
-        <TextInput emailvalue={this.state.currentEmail} onChangeText={this.changeEmail} style = {style.TextField2} placeholder = '  Email: ' autoCapitalize = 'none'/>
+        <TextInput emailvalue={this.state.currentEmail} onChangeText={this.changeEmail} style = {style.TextField2} placeholder ='Email: ' placeholderTextColor="#D6D6D6" autoCapitalize = 'none'/>
         </View>
         <View style = {style.Email}>
         <View style = {style.container4}>
         <Image source = {password}/>
         </View>
-        <TextInput passwordvalue={this.state.currentPassword} onChangeText={this.changePassword} style = {style.TextField2} placeholder = '  Password: ' autoCapitalize = 'none' />
+        <TextInput passwordvalue={this.state.currentPassword} onChangeText={this.changePassword} style = {style.TextField2} placeholder = 'Password: ' placeholderTextColor="#D6D6D6" autoCapitalize = 'none' />
           </View>
           <View style = {style.swipe}>
           <GestureRecognizer

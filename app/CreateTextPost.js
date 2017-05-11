@@ -14,10 +14,8 @@ import {
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
-import PlaneText from './PlaneText';
-import {LogInText, textText} from './textText';
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 import backarrow from '../Resources/backarrow.png';
-
 
 class CreateTextPost extends React.Component {
   constructor(props){
@@ -40,6 +38,13 @@ class CreateTextPost extends React.Component {
   this.setState({
     currentCaption: caption,
   })
+
+class CreateTextPost extends React.Component {
+  static navigationOptions = {
+    headerStyle:{ backgroundColor: '#373435'},
+    headerTitleStyle:{ color: '#FFF'},
+    title: 'Text Post',
+    backButton: '#FFF',
 }
   render(){
 
