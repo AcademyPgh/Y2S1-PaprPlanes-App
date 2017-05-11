@@ -662,6 +662,17 @@ const styles = StyleSheet.create ({
     width: 10,
     paddingLeft: 12,
   },
+  FriendHeader: {
+    flex: 0,
+    flexDirection: 'row',
+    backgroundColor: '#FFA21F',
+    height: 50,
+  },
+  FriendView: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
   StackNavigator: {
     //flex: 1,
     width: 400,
