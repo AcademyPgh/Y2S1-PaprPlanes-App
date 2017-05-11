@@ -7,30 +7,27 @@ import {
   TextInput,
   StyleSheet,
   Image,
+  TouchableOpacity
 } from 'react-native';
 
 import style from './style';
-import check from '../Resources/check.png';
+import search from '../Resources/search.png';
 
 class Search extends React.Component {
   render(){
     return (
       <View style = {style.SearchOne}>
         <View>
-          <Image source={require('../Resources/mac&c.jpg')} style={style.ProfilePic}/>
+          <Image style={style.ProfilePic}/>
         </View>
       <View style = {style.UserNameContainer}>
-        <View style = {style.UserName}>
-          <Text>User Name</Text>
-        </View>
+          <Text style = {style.UserName}>User Name</Text>
       </View>
       <View style={style.SearchTwo}>
-      <View style={style.Search}>
-        <Text style = {style.Search}>Search</Text>
+      <View style={style.SearchThree}>
+        <TextInput style = {style.SearchText} placeholder = 'Search' placeholderTextColor = '#D6D6D6' autoCapitalize = 'none' ></TextInput>
       </View>
-      <View>
-        <Image source={check} style={style.SearchIcon}/>
-      </View>
+        <TouchableOpacity onPress={() => { navigate('')}} ><Image source={search} style={style.SearchIcon}/></TouchableOpacity>
       </View>
     </View>
     );

@@ -15,12 +15,19 @@ import getPost from './getPost'
 import getFriend from './getFriend'
 import style from './style'
 import FriendPassList from './FriendPassList'
-
-
-
-
+import backarrow from '../Resources/backarrow.png';
+import closeIcon from '../Resources/closeIcon.png';
+import swipeArrow from '../Resources/swipeArrow.png';
+import {setUserId, getUserId} from './globalSet';
+import getPostAccess from './getPostAccess';
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 
 class PostPassMain extends React.Component {
+  static navigationOptions = {
+    headerStyle:{ backgroundColor: '#FFA21F'},
+    headerTitleStyle:{ color: '#FFF'},
+    title: 'Friends',
+}
   constructor(props){
    super(props);
 
@@ -32,20 +39,33 @@ class PostPassMain extends React.Component {
    }
 
    this.state={
-     FriendList: temp
-
+     FriendList: temp,
    }
-
+   this.passPost = this.passPost.bind(this);
    this.toggle = this.toggle.bind(this);
   }
 
   passPost(){
+    const { params } = this.props.navigation.state;
+    const PassObject = {
+    userId: global.userId,
+    PostInfo: params.postInfo,
+    idPassArray: [],
+  }
     for (var i = 0; i < this.state.FriendList.length; i++)
     {
-      idPassArray.push (this.state.FriendList[i].UserId);
+      if(this.state.FriendList[i].checked == true)
+      {
+      PassObject.idPassArray.push (this.state.FriendList[i].UserId);
+      }
     }
+    console.log(PassObject.PostInfo);
+    console.warn(PassObject.idPassArray);
+    console.warn(global.userId);
     //ADD IN ABILITY TO PASS FRIEND IDS AND POST ID TO DATABASE
 
+
+    return PassObject
     navigate('Main')
   }
 
@@ -62,22 +82,27 @@ class PostPassMain extends React.Component {
 
     this.setState({FriendList: temp});
   }
-
+//{this.passPost().PostInfo.currentCaption} USE THIS TO CALL THE POST OBJECT
   render(){
     const { navigate } = this.props.navigation;
     return (
-
-
-  <View>
-    <Text>FRIENDS</Text>
+  <View style = {style.FriendView}>
+    <View style = {style.FriendHeader}>
+  <View style = {style.LeftContainer}>
+    {/* <View style = {style.LeftArrow}>
+      <Image style={style.LeftArrow}/>
+    </View> */}
+  </View>
+    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('')}} ><LogInText>Friends</LogInText></TouchableOpacity>
+    <View style = {style.RightContainer}></View>
+  </View>
     <FriendPassList FriendList = {this.state.FriendList} toggle={this.toggle} />
-    <View>
-    <TouchableOpacity onPress={() => {this.passPost()}}><Text>Pass</Text></TouchableOpacity>
+    <View style = {style.container}>
+    <TouchableOpacity style = {style.SignUp2} onPress={() => {this.passPost()}}><LogInText>Swipe to Send &#10095; </LogInText></TouchableOpacity>
     </View>
   </View>
     );
   }
-
 }
 
 

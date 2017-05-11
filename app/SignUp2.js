@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet,Text,TextInput} from 'react-native';
+import { View, StyleSheet,Text,TextInput, Image} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
 import TabNavigator from 'react-native-tab-navigator';
@@ -9,6 +9,7 @@ import EnterUserPassword from './EnterUserPassword';
 import EnterHandle from './EnterHandle';
 import EnterEmail from './EnterEmail';
 import EnterDateOfBirth from './EnterDateOfBirth';
+import logo from '../Resources/logo-200.png';
 
  class SignUp2 extends React.Component {
    constructor(props) {
@@ -30,9 +31,11 @@ import EnterDateOfBirth from './EnterDateOfBirth';
      console.log("Signup2 constructor");
    }
 
-static navigationOptions = {
-  title: 'SignUp2',
-}
+   static navigationOptions = {
+     headerStyle:{ backgroundColor: '#373435'},
+     headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
+     headerTintColor: {color: '#FFF'},
+   };
 
 setLocked() {
   this.setState({
@@ -115,16 +118,15 @@ changeFullName(fullName) {
 
    return (
      <ScrollableTabView
-       style={{marginTop: 20, }}
        locked = {this.state.locked}
 
        initialPage={0}
-       renderTabBar={() => <ScrollableTabBar />}
+       renderTabBar={() => <View />}
      >
        <EnterUserName currentFullName={this.state.currentFullName}  changeFullName={this.changeFullName} tabLabel='Tab #1'/ >
-       <EnterUserPassword setLocked={this.setLocked} currentPassword={this.state.currentPassword}  changePassword={this.changePassword} tabLabel='Tab #2'/>
-       <EnterHandle setLocked={this.setLocked} currentHandle={this.state.currentHandle}  changeHandle={this.changeHandle} tabLabel='Tab #3'/>
-       <EnterEmail setLocked={this.setLocked} currentEmail={this.state.currentEmail}  changeEmail={this.changeEmail} tabLabel='Tab #4'/>
+       <EnterEmail setLocked={this.setLocked} currentEmail={this.state.currentEmail}  changeEmail={this.changeEmail} tabLabel='Tab #2'/>
+       <EnterUserPassword setLocked={this.setLocked} currentPassword={this.state.currentPassword}  changePassword={this.changePassword} tabLabel='Tab #3'/>
+       <EnterHandle setLocked={this.setLocked} currentHandle={this.state.currentHandle}  changeHandle={this.changeHandle} tabLabel='Tab #4'/>
        <EnterDateOfBirth navigation={this.props.navigation} setLocked={this.setLocked} currentDateOfBirth={this.state.currentDateOfBirth}  changeDateOfBirth={this.changeDateOfBirth} tabLabel='Tab #5'/>
 
  </ScrollableTabView>
