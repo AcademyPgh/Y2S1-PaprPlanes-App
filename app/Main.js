@@ -49,7 +49,7 @@ class Main extends React.Component {
       </View>
     </View>
 
-      <PostList  PostData={this.state.PostData}/>
+      <PostList  PostData={this.state.PostData} navigation={navigate}/>
       <FriendRequest/>
   </View>
     );

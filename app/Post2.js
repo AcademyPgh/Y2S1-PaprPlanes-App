@@ -13,10 +13,9 @@ import style from './style';
 import CreateTextPost2 from '../Resources/createtextpost2.png';
 import camera2 from '../Resources/camera2.png';
 import link2 from '../Resources/link2.png';
-
 import ModalDropdown from 'react-native-modal-dropdown';
 
-class Post extends React.Component {
+class Post2 extends React.Component {
 
   constructor(props){
    super(props);
@@ -39,33 +38,33 @@ chooseIcon() {
 }
 
   render(){
-    const navigate = this.props.navigate;
+const {navigate} = this.props.navigation;
     return (
 <View>
 
-  <ModalDropdown style={style.container2} options=
 
-    {[this.props.information.Sendername,
-    this.props.information.AuthorName,
-    this.props.information.Caption,
-    this.props.information.Content]}>
         <View style = {style.PostLinkBoxMain}>
-
+          <TouchableHighlight onPress={() => {navigate('ViewPost', { information: this.props.information})} } >
               <View style = {style.PostLinkBoxSub}>
+
                  <Text style = {style.SenderName}>{this.props.information.SenderName}</Text>
                  <Text style = {style.CreatorName}>{this.props.information.AuthorName}</Text>
+
               </View>
               <View style = {style.PostIcon}>
                   <Image source = {this.chooseIcon()}/>
               </View>
+              {/* <ViewPost information={this.props.information} navigate={navigate} /> */}
+               </TouchableHighlight>
        </View>
-       {/* <SeePost information={this.props.information} navigate={navigate} /> */}
-</ModalDropdown>
+
+
 </View>
+
 
     );
   }
 
 }
 
-export default Post;
+export default Post2;

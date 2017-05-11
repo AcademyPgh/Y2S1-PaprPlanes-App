@@ -9,16 +9,17 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
-import Post from './Post'
+import Post2 from './Post2'
 import style from './style'
 
 class PostList extends React.Component {
   render(){
+
     return (
         <ScrollView>
         {
         this.props.PostData.map((item,index) => {
-          return <Post information={item} key={index} />
+          return <Post2 information={item} key={index} navigation={this.props.navigation}/>
         })
       }
     </ScrollView>

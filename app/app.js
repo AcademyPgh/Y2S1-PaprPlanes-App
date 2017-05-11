@@ -37,6 +37,9 @@ import {LogInText, textText} from './textText';
 import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
 
+import Modal from 'Modal';
+import ViewPost from './ViewPost';
+
 
 
 class HomeScreen extends React.Component {
@@ -62,6 +65,7 @@ class HomeScreen extends React.Component {
       {/*test button will remove later*/}
       <View>
         <Button onPress={() => { navigate('Main')}} title="Main Screen"></Button>
+        {/* <Button onPress={() => { navigate('Modal')}} title="Modal Screen"></Button> */}
         </View>
         </View>
       </View>
@@ -75,15 +79,15 @@ const PaprPlanes = StackNavigator({
   LogIn: {screen: LogIn },
   SignUp: {screen: SignUp },
   Main: {screen: Main },
+  ViewPost: { screen: ViewPost },
   CreateTextPost: { screen: CreateTextPost },
   CreateLinkPost: { screen: CreateLinkPost },
   CreatePicPost: { screen: CreatePicPost },
-
   SignUp1: { screen: SignUp1 },
   SignUp2: { screen: SignUp2 },
   OurCamera:{screen:OurCamera},
   MyCameraRoll:{screen:MyCameraRoll},
-
+  PostModal: { screen: Modal},
   PostPassMain: { screen: PostPassMain },
 
 });
