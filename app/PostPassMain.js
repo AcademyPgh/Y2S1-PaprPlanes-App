@@ -87,15 +87,6 @@ class PostPassMain extends React.Component {
     const { navigate } = this.props.navigation;
     return (
   <View style = {style.FriendView}>
-    <View style = {style.FriendHeader}>
-  <View style = {style.LeftContainer}>
-    {/* <View style = {style.LeftArrow}>
-      <Image style={style.LeftArrow}/>
-    </View> */}
-  </View>
-    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('')}} ><LogInText>Friends</LogInText></TouchableOpacity>
-    <View style = {style.RightContainer}></View>
-  </View>
     <FriendPassList FriendList = {this.state.FriendList} toggle={this.toggle} />
     <View style = {style.container}>
     <TouchableOpacity style = {style.SignUp2} onPress={() => {this.passPost()}}><LogInText>Swipe to Send &#10095; </LogInText></TouchableOpacity>

@@ -23,7 +23,8 @@ componentDidMount(){
    return(
    <View style = {style.View4}>
    <View style = {style.CounterBoxMain}>
-     <LogInText>&#10094;</LogInText><Image style = {style.HeaderLogo} source = {logo}/>
+     <View style = {style.HeaderLogo}>
+     </View>
    </View>
    <View style = {style.Email2}>
    <View style = {style.container5}>
@@ -32,7 +33,7 @@ componentDidMount(){
         </View>
         </View>
         <View style = {style.swipe2}>
-        <LogInText>&#10094; Swipe Left to Continue</LogInText>
+        <LogInText>&#10094; Swipe to Continue</LogInText>
         </View>
    </View>
  );

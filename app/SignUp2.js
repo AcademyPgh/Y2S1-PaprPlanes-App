@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import { View, StyleSheet,Text,TextInput, Image} from 'react-native';
+import {
+  AppRegistry,
+  Text,
+  Button,
+  View,
+  TextInput,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
 import TabNavigator from 'react-native-tab-navigator';
@@ -10,6 +19,8 @@ import EnterHandle from './EnterHandle';
 import EnterEmail from './EnterEmail';
 import EnterDateOfBirth from './EnterDateOfBirth';
 import logo from '../Resources/logo-200.png';
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
+import PostPassMain from './PostPassMain';
 
  class SignUp2 extends React.Component {
    constructor(props) {
@@ -31,11 +42,26 @@ import logo from '../Resources/logo-200.png';
      console.log("Signup2 constructor");
    }
 
-   static navigationOptions = {
-     headerStyle:{ backgroundColor: '#373435'},
-     headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
-     headerTintColor: {color: '#FFF'},
-   };
+   static navigationOptions = ({navigation}) => {
+     return ({
+       headerStyle:{ backgroundColor: '#373435'},
+       headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
+       header: () => {
+         return (
+        <Text style={{ backgroundColor: '#373435', marginTop: 20, justifyContent: 'center'}}>
+            <TouchableOpacity
+              style = {{width: 50, height: 50}}
+              onPress={() => {
+                 navigation.goBack();
+               }} >
+
+              <PlaneText>&#10094;</PlaneText>
+            </TouchableOpacity>
+          <Image source={logo} style={{width: 50, height: 50}} />
+        </Text>) },
+
+     });
+ }
 
 setLocked() {
   this.setState({
@@ -106,20 +132,19 @@ changeFullName(fullName) {
 
 
  render() {
-   const styles = StyleSheet.create ({
-  input: {
-     margin: 15,
-     height: 40,
-     borderColor: 'grey',
-     borderWidth: 1,
-  }
-  })
+  //  const styles = StyleSheet.create ({
+  // input: {
+  //    margin: 15,
+  //    height: 40,
+  //    borderColor: 'grey',
+  //    borderWidth: 1,
+  // }
+  // })
    const { navigate } = this.props.navigation;
 
    return (
      <ScrollableTabView
        locked = {this.state.locked}
-
        initialPage={0}
        renderTabBar={() => <View />}
      >

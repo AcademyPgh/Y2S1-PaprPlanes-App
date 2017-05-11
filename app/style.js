@@ -603,7 +603,7 @@ const styles = StyleSheet.create ({
   },
   LogInText: {
     fontFamily: 'Avenir Next',
-    fontSize: 24,
+    fontSize: 16,
     color: '#FFFFFF',
     textAlign: 'center',
   },
@@ -765,6 +765,14 @@ const styles = StyleSheet.create ({
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'space-between',
+  },
+  BirthdayView: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    backgroundColor: '#373435',
+    //paddingTop: 70,
+    paddingBottom: 20,
   },
 });
 

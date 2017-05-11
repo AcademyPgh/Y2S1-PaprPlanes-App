@@ -20,12 +20,14 @@ componentDidMount(){
 static navigationOptions = {
   headerStyle:{ backgroundColor: '#373435'},
   headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
+  header: (navigation, header) => { return (<Text style={{ backgroundColor: '#373435', marginTop: 20}}><Image source={logo} style={{width: 50, height: 50, alignItems: 'center'}} />Sign Up</Text>) },
 };
  render() {
    return(
    <View style = {style.View4}>
    <View style = {style.CounterBoxMain}>
-     <LogInText>&#10094;</LogInText><Image style = {style.HeaderLogo} source = {logo}/>
+     <View style = {style.HeaderLogo}>
+     </View>
    </View>
    <View style = {style.Email2}>
    <View style = {style.container5}>
@@ -34,7 +36,7 @@ static navigationOptions = {
         </View>
         </View>
         <View style = {style.swipe2}>
-        <LogInText>&#10094; Swipe Left to Continue</LogInText>
+        <LogInText>&#10094; Swipe to Continue</LogInText>
         </View>
    </View>
  );
