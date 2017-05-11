@@ -21,18 +21,11 @@ import CreatePicPost from './CreatePicPost'
 import style from './style'
 import logo from '../Resources/logo-200.png'
 import PlaneText from './PlaneText';
-
-
-
 import SignUp1 from './SignUp1';
 import SignUp2 from './SignUp2';
 import OurCamera from './OurCamera';
 import MyCameraRoll from './MyCameraRoll'
-
-
-
 import PostPassMain from './PostPassMain'
-
 import {LogInText, textText} from './textText';
 import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
@@ -43,11 +36,12 @@ class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Greeting Screen',
   };
+ 
   render() {
     const { navigate } = this.props.navigation;
     return (
 
-      <View style = {style.View}>
+    <View style = {style.View}>
       <View style = {style.Pic}>
       <Image source = {logo}/>
       <PlaneText>PaprPlane</PlaneText>
@@ -64,7 +58,7 @@ class HomeScreen extends React.Component {
         <Button onPress={() => { navigate('Main')}} title="Main Screen"></Button>
         </View>
         </View>
-      </View>
+    </View>
 
     );
   }
@@ -81,8 +75,8 @@ const PaprPlanes = StackNavigator({
 
   SignUp1: { screen: SignUp1 },
   SignUp2: { screen: SignUp2 },
-  OurCamera:{screen:OurCamera},
-  MyCameraRoll:{screen:MyCameraRoll},
+  OurCamera:{screen: OurCamera},
+  MyCameraRoll:{screen: MyCameraRoll},
 
   PostPassMain: { screen: PostPassMain },
 

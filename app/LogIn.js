@@ -19,6 +19,7 @@ import logo from '../Resources/logo-200.png';
 import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
 import StackNavigation from './StackNavigator';
+import {setUserId, getUserId} from './globalSet';
 
 class LogIn extends React.Component {
   constructor(props) {
@@ -47,9 +48,13 @@ goLogin(){
 for(var i=0;i<this.state.UserData.length;i++)
    {
 
-    if ((this.state.UserData[i].Email === this.state.currentEmail)&&(this.state.UserData[i].Password === this.state.currentPassword))
-    {console.warn( "true login");
-      return true;}
+  if ((this.state.UserData[i].Email === this.state.currentEmail)&&(this.state.UserData[i].Password === this.state.currentPassword))
+    {
+      console.warn( "true login");
+      console.warn("User ID: " + this.state.UserData[i].id);
+      global.userId = this.state.UserData[i].id;
+      return true;
+    }
   }
   console.warn("false login");
   return false;
@@ -62,7 +67,7 @@ for(var i=0;i<this.state.UserData.length;i++)
       })
     }
 
-    changePassword(pass) {
+  changePassword(pass) {
       this.setState({
         currentPassword: pass,
       })
@@ -72,6 +77,7 @@ for(var i=0;i<this.state.UserData.length;i++)
     const { navigate } = this.props.navigation;
 
     if (this.goLogin()){
+
      navigate('Main');
     }
     else{
@@ -124,8 +130,7 @@ for(var i=0;i<this.state.UserData.length;i++)
           <View style = {style.swipe}>
           <GestureRecognizer
                 onSwipeLeft={(state) => this.onSwipeLeft(state)}
-                config={config}
-                >
+                config={config}>
                 <LogInText>&#10094; Swipe to LogIn </LogInText>
               </GestureRecognizer>
 
