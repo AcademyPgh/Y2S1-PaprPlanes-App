@@ -43,6 +43,11 @@ class Main extends React.Component {
    }
  }
 
+ static navigationOptions = {
+   headerStyle:{ backgroundColor: '#373435', marginTop: 20},
+   headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
+   backButtonTextStyle: { color: '#FFF'},
+ }
   render(){
     const { navigate } = this.props.navigation;
     return (

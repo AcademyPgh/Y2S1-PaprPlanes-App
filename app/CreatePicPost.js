@@ -19,36 +19,28 @@ import PostPassMain from'./PostPassMain';
 import OurCamera from './OurCamera';
 import MyCameraRoll from './MyCameraRoll';
 import backarrow from '../Resources/backarrow.png'
+
+
 class CreatePicPost extends React.Component {
+
+  static navigationOptions = {
+    headerStyle:{ backgroundColor: '#373435', marginTop: 20},
+    headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
+    title: 'Picture Post',
+  }
+
   render(){
 const {navigate} = this.props.navigation;
 return (
   <View style = {style.View3}>
-
-  <View style = {style.CounterBoxMain}>
-  <View style = {style.LeftContainer}>
-  <LogInText> &#10094; </LogInText>
-  </View>
-    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('SignUp')}} ><LogInText>Log In</LogInText></TouchableOpacity>
-    <View style = {style.RightContainer}></View>
-  </View>
-  <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
-  <Button onPress={() => { navigate('OurCamera')}} title='Take a Photo'></Button>
-  <Button onPress={() => { navigate('MyCameraRoll')}} title='Camera Roll'></Button>
-
-  <View style = {style.PostCreateHeader}>
-    <View style = {style.LeftContainer}>
-      <View style = {style.LeftArrow}>
-        <Image source={backarrow} style={style.LeftArrow}/>
-      </View>
+    <View style = {style.container2}>
+      <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
+      <Button onPress={() => { navigate('OurCamera')}} title='Take a Photo'></Button>
+      <Button onPress={() => { navigate('MyCameraRoll')}} title='Camera Roll'></Button>
     </View>
-    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('')}} ><LogInText>Log In</LogInText></TouchableOpacity>
-  <View style = {style.RightContainer}>
-</View>
-</View>
-  <View style = {style.container}>
-  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain')}} ><LogInText>Send</LogInText></TouchableOpacity>
-</View>
+    <View style = {style.container}>
+      <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain')}} ><LogInText>Send</LogInText></TouchableOpacity>
+    </View>
   </View>
     );
   }
