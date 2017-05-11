@@ -32,6 +32,9 @@ import MyCameraRoll from './MyCameraRoll';
 import PostPassMain from './PostPassMain';
 import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
+import Post from './Post'
+import ViewPost from './ViewPost'
+
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -88,6 +91,9 @@ const PaprPlanes = StackNavigator({
   PostPassMain: { screen: PostPassMain },
   SearchPage: { screen: SearchPage },
   Welcome: { screen: Welcome },
+  Post: {screen: Post},
+  ViewPost: {screen: ViewPost}
+
 
 });
 

@@ -59,7 +59,7 @@ class Main extends React.Component {
       <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>
       </View>
     </View>
-      <PostList  PostData={this.state.PostData}/>
+      <PostList  PostData={this.state.PostData} navigation = {this.props.navigation}/>
       <FriendRequest/>
       <View>
         <Button onPress={() => { navigate('SearchPage')}} title="SearchPage"></Button>
