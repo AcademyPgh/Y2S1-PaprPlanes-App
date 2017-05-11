@@ -36,6 +36,8 @@ const { navigate } = this.props.navigation;
 return (
   <View style = {style.View3}>
     <TouchableOpacity onPress={() => {navigate('Main')} } >
+      <Text>BACK</Text>
+      </TouchableOpacity>
         <View style = {style.PostLinkBoxSub}>
 
            <Text style = {style.SenderName}>{this.state.PostInfo.SenderName}</Text>
@@ -44,9 +46,9 @@ return (
            <Text style = {style.CreatorName}>{this.state.PostInfo.Text}</Text>
 
         </View>
-
-
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => {navigate('PostPassMain', {PostInfo: this.state.PostInfo})} } >
+          <Text>Pass</Text>
+          </TouchableOpacity>
   </View>
 
     );
