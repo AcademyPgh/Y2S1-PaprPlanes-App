@@ -46,13 +46,14 @@ const {navigate}= this.props.navigation;
 
 
         <View style = {style.PostLinkBoxMain}>
-          <TouchableOpacity onPress={() => {navigate('ViewPost', {info: this.props.information})} } >
+
               <View style = {style.PostLinkBoxSub}>
 
                  <Text style = {style.SenderName}>{this.props.information.SenderName}</Text>
                  <Text style = {style.CreatorName}>{this.props.information.AuthorName}</Text>
 
               </View>
+                <TouchableOpacity onPress={() => {navigate('ViewPost', {info: this.props.information})} } >
               <View style = {style.PostIcon}>
                   <Image source = {this.chooseIcon()}/>
               </View>

@@ -8,6 +8,7 @@ import {
   StyleSheet,
   Image,
   TouchableHighlight,
+  TouchableOpacity
 
 } from 'react-native';
 
@@ -19,25 +20,33 @@ import {LogInText, textText} from './textText';
 import Post2 from './Post2';
 
 class ViewPost extends React.Component {
+  constructor(props){
+   super(props);
+   const { params } = this.props.navigation.state;
+
+   this.state = {
+    PostInfo: params.info,
+   }
+ }
   render(){
 
 const { navigate } = this.props.navigation;
-const { params } = this.props.navigation.state;
+
 
 return (
   <View style = {style.View3}>
-    <TouchableHighlight onPress={() => {navigate('Main')} } >
+    <TouchableOpacity onPress={() => {navigate('Main')} } >
         <View style = {style.PostLinkBoxSub}>
 
-           <Text style = {style.SenderName}>{params.SenderName}</Text>
-           <Text style = {style.CreatorName}>{params.AuthorName}</Text>
-           <Text style = {style.CreatorName}>{params.Caption}</Text>
-           <Text style = {style.CreatorName}>{params.Text}</Text>
+           <Text style = {style.SenderName}>{this.state.PostInfo.SenderName}</Text>
+           <Text style = {style.CreatorName}>{this.state.PostInfo.AuthorName}</Text>
+           <Text style = {style.CreatorName}>{this.state.PostInfo.Caption}</Text>
+           <Text style = {style.CreatorName}>{this.state.PostInfo.Text}</Text>
 
         </View>
-        
 
-         </TouchableHighlight>
+
+      </TouchableOpacity>
   </View>
 
     );
