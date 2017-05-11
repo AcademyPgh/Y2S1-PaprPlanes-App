@@ -15,12 +15,14 @@ import getPost from './getPost'
 import getFriend from './getFriend'
 import style from './style'
 import FriendPassList from './FriendPassList'
-
-
-
-
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 
 class PostPassMain extends React.Component {
+  static navigationOptions = {
+    headerStyle:{ backgroundColor: '#FFA21F'},
+    headerTitleStyle:{ color: '#FFF'},
+    title: 'Friends',
+}
   constructor(props){
    super(props);
 
@@ -67,13 +69,11 @@ class PostPassMain extends React.Component {
     const { navigate } = this.props.navigation;
     return (
 
-
-  <View>
-    <Text>FRIENDS</Text>
+<View>
     <FriendPassList FriendList = {this.state.FriendList} toggle={this.toggle} />
-    <View>
-    <TouchableOpacity onPress={() => {this.passPost()}}><Text>Pass</Text></TouchableOpacity>
-    </View>
+    <View style = {style.container}>
+    <TouchableOpacity style = {style.SignUp2} onPress={() => {this.passPost()}}><LogInText>&#10094; Swipe To Send</LogInText></TouchableOpacity>
+</View>
   </View>
     );
   }

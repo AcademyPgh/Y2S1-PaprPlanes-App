@@ -10,15 +10,9 @@ import {
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import style from './style';
-import PlaneText from './PlaneText';
-
-
+import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 import SignUp1 from './SignUp1';
 import SignUp2 from './SignUp2';
-
-
-import {LogInText, textText} from './textText';
-
 
 class SignUp extends React.Component {
   static navigationOptions = {

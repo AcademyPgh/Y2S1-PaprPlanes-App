@@ -23,9 +23,8 @@ return (
   <View style = {style.View3}>
   <View style = {style.CounterBoxMain}>
   <View style = {style.LeftContainer}>
-  <LogInText> &#10094; </LogInText>
+    <LogInText>&#10094;</LogInText><Image style = {style.HeaderLogo} source = {logo}/>
   </View>
-    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('SignUp')}} ><LogInText>Log In</LogInText></TouchableOpacity>
     <View style = {style.RightContainer}></View>
   </View>
   <View style = {style.container}>
