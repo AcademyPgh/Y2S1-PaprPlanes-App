@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
 import Main from './Main';
@@ -21,6 +22,7 @@ import CreatePicPost from './CreatePicPost'
 import style from './style'
 import logo from '../Resources/logo-200.png'
 import PlaneText from './PlaneText';
+import Axiosfile from './Axiosfile';
 
 
 
@@ -61,7 +63,7 @@ class HomeScreen extends React.Component {
         </View>
       {/*test button will remove later*/}
       <View>
-        <Button onPress={() => { navigate('Main')}} title="Main Screen"></Button>
+        <Button onPress={() => { navigate('Axiosfile')}} title="Axiosfile"></Button>
         </View>
         </View>
       </View>
@@ -83,7 +85,7 @@ const PaprPlanes = StackNavigator({
   SignUp2: { screen: SignUp2 },
   OurCamera:{screen:OurCamera},
   MyCameraRoll:{screen:MyCameraRoll},
-
+  Axiosfile:{screen:Axiosfile},
   PostPassMain: { screen: PostPassMain },
 
 });

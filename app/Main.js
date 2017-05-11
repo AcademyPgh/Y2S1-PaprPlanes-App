@@ -22,6 +22,7 @@ import FriendRequest from './FriendRequest';
 import Search from './Search';
 import OurCamera from './OurCamera';
 import MyCameraRoll from './MyCameraRoll';
+import CreatePicPost from './CreatePicPost';
 
 class Main extends React.Component {
   constructor(props){
@@ -42,7 +43,7 @@ class Main extends React.Component {
       <TouchableOpacity onPress={() => { navigate('CreateLinkPost')}} ><Image source ={link2}/></TouchableOpacity>
       </View>
       <View style={style.PicContainer}>
-      <TouchableOpacity onPress={() => { navigate('MyCameraRoll')}} ><Image source ={camera2}/></TouchableOpacity>
+      <TouchableOpacity onPress={() => { navigate('CreatePicPost')}} ><Image source ={camera2}/></TouchableOpacity>
       </View>
       <View style={style.TextContainer}>
       <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>

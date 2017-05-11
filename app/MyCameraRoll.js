@@ -7,6 +7,7 @@ import {
   ScrollView,
   Image,
   CameraRoll,
+  TouchableHighlight,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -32,6 +33,7 @@ class MyCameraRoll extends Component {
    super(props);
   this.state= {
       images: [],
+      selected:'',
     };
 
     this.storeImages=this.storeImages.bind(this);
@@ -40,9 +42,15 @@ class MyCameraRoll extends Component {
 
   componentDidMount() {
     const fetchParams = {
-      first: 10,
+      first: 20,
     };
     CameraRoll.getPhotos(fetchParams, this.storeImages, this.logImageError);
+  }
+  selectImage(uri){
+    setState={
+      selected:uri,
+    }
+    console.log('Selected Image:',uri);
   }
 
   storeImages(data) {
@@ -61,7 +69,14 @@ class MyCameraRoll extends Component {
     return (
       <ScrollView style={styles.container}>
         <View style={styles.imageGrid}>
-          { this.state.images.map((image) => <Image style={styles.image} source={{ uri: image.uri }} />) }
+        { this.state.images.map((image) => {
+                  return (
+                    <TouchableHighlight onPress={this.selectImage.bind(null, image.uri)}>
+                      <Image style={styles.image} source={{ uri: image.uri }} />
+                    </TouchableHighlight>
+                  );
+                })
+              }
         </View>
       </ScrollView>
     );
