@@ -539,6 +539,7 @@ const styles = StyleSheet.create ({
     borderRadius: 50/2,
     borderColor: '#D6D6D6',
     borderWidth: 1,
+    marginBottom: 4,
   },
   CounterLeft: {
     fontFamily: 'Avenir Next',
@@ -592,13 +593,17 @@ const styles = StyleSheet.create ({
   },
   PlaneText2: {
     fontFamily: 'DIN Condensed',
-    //fontSize: 20,
+    color: '#FFFFFF',
+    fontSize: 30,
+    textAlign: 'left',
+    marginTop: 15,
+  },
+  PlaneText3: {
+    fontFamily: 'DIN Condensed',
+    fontSize: 22,
     color: '#FFFFFF',
     textAlign: 'center',
-    marginTop: 25,
-    fontSize: 30,
-    color: '#FFFFFF',
-    textAlign: 'left',
+    textAlign: 'center',
     marginTop: 15,
   },
   LogInText: {

@@ -40,8 +40,8 @@ class CreateTextPost extends React.Component {
   })
 }
 static navigationOptions = {
-    headerStyle:{ backgroundColor: '#373435'},
-    headerTitleStyle:{ color: '#FFF'},
+    headerStyle:{ backgroundColor: '#373435', marginTop: 20},
+    headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
     title: 'Text Post',
     backButton: '#FFF',
 }
@@ -51,21 +51,12 @@ const { navigate } = this.props.navigation;
 
 return (
   <View style = {style.View3}>
-  <View style = {style.PostCreateHeader}>
-    <View style = {style.LeftContainer}>
-      <View style = {style.LeftArrow}>
-        <Image source={backarrow} style={style.LeftArrow}/>
-      </View>
-    </View>
-    <TouchableOpacity style = {style.MiddleContainer} onPress={() => { navigate('')}} ><LogInText>Text Post</LogInText></TouchableOpacity>
-    <View style = {style.RightContainer}></View>
-  </View>
   <View style = {style.container2}>
   <TextInput style = {style.TextField} placeholder = 'Text' autoCapitalize = 'none'/>
   <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
   </View>
   <View style = {style.container}>
-  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {postInfo: this.state})}} ><LogInText>Submit</LogInText></TouchableOpacity>
+  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {postInfo: this.state})}} ><LogInText>Send</LogInText></TouchableOpacity>
 </View>
   </View>
     );

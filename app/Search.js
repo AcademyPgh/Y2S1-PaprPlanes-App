@@ -18,7 +18,7 @@ class Search extends React.Component {
     return (
       <View style = {style.SearchOne}>
         <View>
-          <Image style={style.ProfilePic}/>
+          <Image source={require('../Resources/mac&c.jpg')} style={style.ProfilePic}/>
         </View>
       <View style = {style.UserNameContainer}>
           <Text style = {style.UserName}>User Name</Text>
