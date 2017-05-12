@@ -45,7 +45,7 @@ class Main extends React.Component {
     const { navigate } = this.props.navigation;
     return (
   <View>
-    <CounterBar/>
+    <CounterBar navigation = {this.props.navigation}/>
       <View style={style.CreatePost}>
         <View style={style.LinkContainer}>
           <TouchableOpacity onPress={() => { navigate('CreateLinkPost')}} ><Image source ={link2}/></TouchableOpacity>
@@ -59,12 +59,7 @@ class Main extends React.Component {
         </View>
           <PostList  PostData={this.state.PostData} navigation = {this.props.navigation}/>
           <FriendRequest/>
-        <View>
-          <Button onPress={() => { navigate('SearchPage')}} title="SearchPage"></Button>
-        </View>
-        <View>
-          <Button onPress={() => { navigate('Welcome')}} title="Welcome"></Button>
-        </View>
+
   </View>
     );
   }
@@ -73,3 +68,10 @@ class Main extends React.Component {
 
 
 export default Main;
+{/* THIS WILL GOT BACK INTO RENDER WHEN WE ARE WORKING ON IT
+  <View>
+  <Button onPress={() => { navigate('SearchPage')}} title="SearchPage"></Button>
+</View>
+<View>
+  <Button onPress={() => { navigate('Welcome')}} title="Welcome"></Button>
+</View> */}

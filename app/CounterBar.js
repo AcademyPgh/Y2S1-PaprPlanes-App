@@ -28,6 +28,7 @@ class CounterBar extends React.Component {
  }
 
   render(){
+    const { navigate } = this.props.navigation;
     return (
       <View style = {style.CounterBoxMain}>
       <View style = {style.LeftContainer}>

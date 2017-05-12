@@ -37,8 +37,6 @@ chooseIcon() {
   else {
     return link2;
   }
-
-
 }
 
 render(){
