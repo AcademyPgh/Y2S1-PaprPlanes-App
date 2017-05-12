@@ -39,7 +39,7 @@ return (
       <Button onPress={() => { navigate('MyCameraRoll')}} title='Camera Roll'></Button>
     </View>
     <View style = {style.container}>
-      <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain')}} ><LogInText>Send</LogInText></TouchableOpacity>
+      <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {PostInfo: ''})}} ><LogInText>Send</LogInText></TouchableOpacity>
     </View>
   </View>
     );

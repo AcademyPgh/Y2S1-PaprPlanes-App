@@ -89,7 +89,7 @@ class PostPassMain extends React.Component {
   <View style = {style.FriendView}>
     <FriendPassList FriendList = {this.state.FriendList} toggle={this.toggle} />
     <View style = {style.container}>
-    <TouchableOpacity style = {style.SignUp2} onPress={() => {this.passPost()}}><LogInText>Swipe to Send &#10095; </LogInText></TouchableOpacity>
+    <TouchableOpacity style = {style.SignUp2} onPress={() => {this.passPost()}}><LogInText>Press to Send &#10095; </LogInText></TouchableOpacity>
     </View>
   </View>
     );
