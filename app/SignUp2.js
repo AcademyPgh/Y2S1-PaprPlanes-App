@@ -44,11 +44,9 @@ import PostPassMain from './PostPassMain';
 
    static navigationOptions = ({navigation}) => {
      return ({
-       headerStyle:{ backgroundColor: '#373435'},
-       headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
        header: () => {
          return (
-        <Text style={{ backgroundColor: '#373435', marginTop: 20, justifyContent: 'center'}}>
+        <Text style={{ backgroundColor: '#373435', marginTop: 20}}>
             <TouchableOpacity
               style = {{width: 50, height: 50}}
               onPress={() => {
@@ -57,7 +55,7 @@ import PostPassMain from './PostPassMain';
 
               <PlaneText>&#10094;</PlaneText>
             </TouchableOpacity>
-          <Image source={logo} style={{width: 50, height: 50}} />
+          <Image source={logo} style={{width: 40, height: 40, marginLeft: 125}} />
         </Text>) },
 
      });

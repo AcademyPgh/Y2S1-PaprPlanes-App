@@ -49,7 +49,7 @@ const styles = StyleSheet.create ({
     //paddingBottom: 20,
     width: 50,
     height: 50,
-    resizeMode: 'contain',
+    //resizeMode: 'contain',
   },
   View2: {
     flex: 1,
@@ -259,6 +259,21 @@ const styles = StyleSheet.create ({
       //color: 'white',
     //backgroundColor: '#373435',
   },
+  container6: {
+      flex: 1,
+      flexDirection: 'column',
+      //justifyContent: 'space-between',
+      alignItems: 'center',
+      justifyContent: 'center',
+      //textAlign: 'center',
+      //alignItems: 'center',
+    //justifyContent:'flex-end',
+  //    paddingTop: 200,
+  //    fontSize: 16,
+  //    lineHeight: 30,
+        //color: 'white',
+      backgroundColor: '#FFFFFF',
+  },
   input: {
     flex: 1,
     //justifyContent: 'space-between',
@@ -360,6 +375,15 @@ const styles = StyleSheet.create ({
     borderWidth: 1,
     marginTop: 15,
     textAlign: 'center',
+},
+WebPreview2: {
+  width: 325,
+  height: 100,
+  borderColor: '#5A5858',
+  borderWidth: 1,
+  marginTop: 15,
+  justifyContent: 'center',
+  alignItems: 'center',
 },
   TextField4: {
     width: 300,
@@ -691,7 +715,7 @@ const styles = StyleSheet.create ({
     marginLeft: 15,
     width: 30,
     height: 30,
-    resizeMode: 'contain',
+    //resizeMode: 'contain',
   },
   FriendPass: {
     flex: 6,
@@ -756,7 +780,7 @@ const styles = StyleSheet.create ({
   },
   LeftArrow: {
     flex: 1,
-    resizeMode: 'contain',
+    //resizeMode: 'contain',
     width: 10,
     paddingLeft: 12,
   },
@@ -778,6 +802,9 @@ const styles = StyleSheet.create ({
     backgroundColor: '#373435',
     //paddingTop: 70,
     paddingBottom: 20,
+  },
+  cathedral: {
+    resizeMode: 'cover',
   },
 });
 
