@@ -12,6 +12,8 @@ import { StackNavigator } from 'react-navigation';
 import style from './style';
 import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 import logo from '../Resources/logo-200.png';
+import backarrow from '../Resources/backarrow.png';
+
 
  class EnterUserPassword extends React.Component {
 componentDidMount(){
@@ -33,12 +35,14 @@ static navigationOptions = {
    <View style = {style.container5}>
    <PlaneText2>What is your password?</PlaneText2>
        <TextInput value={this.props.currentPassword} onChangeText={this.props.changePassword} style = {style.TextField4} placeholder = 'Password' placeholderTextColor = "#D6D6D6" autoCapitalize = 'none'/>
-        </View>
-        </View>
-        <View style = {style.swipe2}>
-        <LogInText>&#10094; Swipe to Continue</LogInText>
-        </View>
-   </View>
+     </View>
+     </View>
+     <View style = {style.swipe3}>
+     <Image source={backarrow} style={style.swipeArrow}/>
+       <View style={style.swipeText} ><LogInText>Swipe to Continue</LogInText>
+       </View>
+     </View>
+     </View>
  );
  }
  }

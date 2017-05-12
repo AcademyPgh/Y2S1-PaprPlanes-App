@@ -22,16 +22,9 @@ import FriendRequest from './FriendRequest';
 import Search from './Search';
 import OurCamera from './OurCamera';
 import MyCameraRoll from './MyCameraRoll';
-
 import CreatePicPost from './CreatePicPost';
-
 import SearchPage from './SearchPage';
 import Welcome from './Welcome';
-// import camera from '../Resources/camera.svg';
-// import SVGImage from 'react-native-svg-image';
-// import cameraLg from '../Resources/cameraLg.png';
-
-
 
 
 class Main extends React.Component {
@@ -46,32 +39,32 @@ class Main extends React.Component {
  static navigationOptions = {
    headerStyle:{ backgroundColor: '#373435', marginTop: 20},
    headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
-   backButtonTextStyle: { color: '#FFF'},
+   backButtonTextStyle: { tintColor: '#FFF'},
  }
   render(){
     const { navigate } = this.props.navigation;
     return (
   <View>
     <CounterBar/>
-    <View style={style.CreatePost}>
-      <View style={style.LinkContainer}>
-      <TouchableOpacity onPress={() => { navigate('CreateLinkPost')}} ><Image source ={link2}/></TouchableOpacity>
-      </View>
-      <View style={style.PicContainer}>
-      <TouchableOpacity onPress={() => { navigate('CreatePicPost')}} ><Image source ={camera2}/></TouchableOpacity>
-      </View>
-      <View style={style.TextContainer}>
-      <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>
-      </View>
-    </View>
-      <PostList  PostData={this.state.PostData} navigation = {this.props.navigation}/>
-      <FriendRequest/>
-      <View>
-        <Button onPress={() => { navigate('SearchPage')}} title="SearchPage"></Button>
+      <View style={style.CreatePost}>
+        <View style={style.LinkContainer}>
+          <TouchableOpacity onPress={() => { navigate('CreateLinkPost')}} ><Image source ={link2}/></TouchableOpacity>
+        </View>
+        <View style={style.PicContainer}>
+          <TouchableOpacity onPress={() => { navigate('CreatePicPost')}} ><Image source ={camera2}/></TouchableOpacity>
+        </View>
+        <View style={style.TextContainer}>
+          <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>
+        </View>
+        </View>
+          <PostList  PostData={this.state.PostData} navigation = {this.props.navigation}/>
+          <FriendRequest/>
+        <View>
+          <Button onPress={() => { navigate('SearchPage')}} title="SearchPage"></Button>
         </View>
         <View>
           <Button onPress={() => { navigate('Welcome')}} title="Welcome"></Button>
-          </View>
+        </View>
   </View>
     );
   }

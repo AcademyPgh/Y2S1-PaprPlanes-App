@@ -12,6 +12,8 @@ import { StackNavigator } from 'react-navigation';
 import style from './style';
 import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
 import logo from '../Resources/logo-200.png';
+import backarrow from '../Resources/backarrow.png';
+
 
  class EnterUserName extends React.Component {
    static navigationOptions = {
@@ -25,20 +27,22 @@ import logo from '../Resources/logo-200.png';
  render() {
    return (
      <View style = {style.View4}>
-     <View style = {style.CounterBoxMain}>
-       <View style = {style.HeaderLogo}>
-       </View>
-     </View>
-     <View style = {style.Email2}>
-     <View style = {style.container5}>
-     <PlaneText2>What is your name?</PlaneText2>
-         <TextInput value={this.props.currentFullName} onChangeText={this.props.changeFullName} style = {style.TextField4} placeholder = 'Full Name' placeholderTextColor = "#D6D6D6" autoCapitalize = 'none'/>
-          </View>
-          </View>
-          <View style = {style.swipe2}>
-          <LogInText>&#10094; Swipe to Continue</LogInText>
-          </View>
-     </View>
+      <View style = {style.CounterBoxMain}>
+         <View style = {style.HeaderLogo}>
+         </View>
+      </View>
+      <View style = {style.Email2}>
+         <View style = {style.container5}>
+           <PlaneText2>What is your name?</PlaneText2>
+           <TextInput value={this.props.currentFullName} onChangeText={this.props.changeFullName} style = {style.TextField4} placeholder = 'Full Name' placeholderTextColor = "#D6D6D6" autoCapitalize = 'none'/>
+         </View>
+      </View>
+         <View style = {style.swipe3}>
+           <Image source={backarrow} style={style.swipeArrow}/>
+           <View style={style.swipeText} ><LogInText>Swipe to Continue</LogInText>
+           </View>
+         </View>
+    </View>
    );
  }
 }

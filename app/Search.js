@@ -12,13 +12,14 @@ import {
 
 import style from './style';
 import search from '../Resources/search.png';
+import profile from '../Resources/profile.jpg';
 
 class Search extends React.Component {
   render(){
     return (
       <View style = {style.SearchOne}>
         <View>
-          <Image source={require('../Resources/mac&c.jpg')} style={style.ProfilePic}/>
+          <Image source={profile} style={style.ProfilePic}/>
         </View>
       <View style = {style.UserNameContainer}>
           <Text style = {style.UserName}>User Name</Text>

@@ -38,7 +38,7 @@ import ViewPost from './ViewPost'
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
-    headerStyle:{ backgroundColor: '#373435'},
+    headerStyle:{ backgroundColor: '#373435', marginTop: 20},
     headerTitleStyle:{ color: '#FFF'},
   };
 

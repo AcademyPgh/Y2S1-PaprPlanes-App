@@ -49,7 +49,7 @@ const styles = StyleSheet.create ({
     //paddingBottom: 20,
     width: 50,
     height: 50,
-    resizeMode: 'contain',
+    // resizeMode: 'contain',
   },
   View2: {
     flex: 1,
@@ -289,8 +289,26 @@ const styles = StyleSheet.create ({
     //textAlign: 'center',
     //color: 'white',
    alignItems: 'center',
-   justifyContent: 'flex-end',
-   marginBottom: 100,
+   justifyContent: 'center',
+  //  marginBottom: 100,
+  },
+  swipe3: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  swipeArrow: {
+      flex: 0,
+      flexDirection: 'row',
+      justifyContent:'flex-end',
+      width: 30,
+      height: 30,
+      resizeMode: 'contain',
+  },
+  swipeText: {
+      flex: 0,
+      flexDirection: 'row',
   },
   TextField: {
     width: 350,
@@ -497,8 +515,6 @@ const styles = StyleSheet.create ({
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 15,
-    // resizeMode: 'contain'
-    // height: 30,
   },
   CounterBoxMain: {
     flex: 0,
@@ -519,19 +535,14 @@ const styles = StyleSheet.create ({
   LeftContainer: {
     flex: 1,
     justifyContent: 'center',
-    //color: '#FFFFFF',
   },
   MiddleContainer: {
     flex: 8,
-    //alignItems: 'center',
     justifyContent: 'center',
-    //color: '#FFFFFF',
   },
   RightContainer: {
     flex: 1,
     justifyContent: 'center',
-    //textAlign: 'right',
-    //color: '#FFFFFF',
   },
   ProfilePic: {
     width: 50,
@@ -610,7 +621,7 @@ const styles = StyleSheet.create ({
     fontFamily: 'Avenir Next',
     fontSize: 16,
     color: '#FFFFFF',
-    textAlign: 'center',
+    textAlign: 'left',
   },
   textText: {
     fontFamily: 'Avenir Next',
@@ -691,7 +702,7 @@ const styles = StyleSheet.create ({
     marginLeft: 15,
     width: 30,
     height: 30,
-    resizeMode: 'contain',
+    // resizeMode: 'contain',
   },
   FriendPass: {
     flex: 6,
@@ -722,7 +733,7 @@ const styles = StyleSheet.create ({
     flexDirection: 'column',
     justifyContent: 'center',
     backgroundColor: '#373435',
-    paddingTop: 70,
+    paddingTop: 30,
     paddingBottom: 20,
   },
   Video: {
@@ -756,7 +767,7 @@ const styles = StyleSheet.create ({
   },
   LeftArrow: {
     flex: 1,
-    resizeMode: 'contain',
+    // resizeMode: 'contain',
     width: 10,
     paddingLeft: 12,
   },

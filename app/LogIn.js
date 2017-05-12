@@ -19,6 +19,7 @@ import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
 import {setUserId, getUserId} from './globalSet';
 import mac from '../Resources/mac&c.jpg';
+import backarrow from '../Resources/backarrow.png';
 
 class LogIn extends React.Component {
   constructor(props) {
@@ -38,7 +39,7 @@ class LogIn extends React.Component {
   }
 
   static navigationOptions = {
-    headerStyle:{ backgroundColor: '#00CCFF'},
+    headerStyle:{ backgroundColor: '#00CCFF', marginTop: 20},
     headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
     headerButtonStyle: {color: '#FFF'},
     title: 'Log In',
@@ -131,11 +132,15 @@ for(var i=0;i<this.state.UserData.length;i++)
           <GestureRecognizer
                 onSwipeLeft={(state) => this.onSwipeLeft(state)}
                 config={config}>
-                <LogInText>&#10094; Swipe to LogIn </LogInText>
-              </GestureRecognizer>
+                <View style = {style.swipe3}>
+                  <Image source={backarrow} style={style.swipeArrow}/>
+                  <View style={style.swipeText} ><LogInText>Swipe to Log In</LogInText>
+                  </View>
+                </View>
+          </GestureRecognizer>
 
-            </View>
-            </View>
+          </View>
+          </View>
 
     );
   }

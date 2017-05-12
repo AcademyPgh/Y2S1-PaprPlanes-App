@@ -7,11 +7,12 @@ import {
   TextInput,
   StyleSheet,
   Image,
+  TouchableOpacity,
 } from 'react-native';
-
-import PostCount from './getPost'
-import TotalCount from './getUser'
-import style from './style'
+import PostCount from './getPost';
+import TotalCount from './getUser';
+import style from './style';
+import profile from '../Resources/profile.jpg';
 
 class CounterBar extends React.Component {
   constructor(props){
@@ -30,11 +31,11 @@ class CounterBar extends React.Component {
     return (
       <View style = {style.CounterBoxMain}>
       <View style = {style.LeftContainer}>
-        <Text style = {style.CounterLeft}>Left Counter</Text>
+        <Text style = {style.CounterLeft}>1500</Text>
         </View>
-      <Image source={require('../Resources/mac&c.jpg')} style={style.ProfilePic}/>
+        <TouchableOpacity onPress={() => { navigate('SearchPage')}}><Image source={profile} style={style.ProfilePic}/></TouchableOpacity>
       <View style = {style.RightContainer}>
-        <Text style = {style.CounterRight}>Right Counter</Text>
+        <Text style = {style.CounterRight}>42</Text>
         </View>
     </View>
     );
