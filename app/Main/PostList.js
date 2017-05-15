@@ -17,13 +17,13 @@ class PostList extends React.Component {
   render(){
 
     return (
-        <ScrollView>
+        <View>
         {
         this.props.PostData.map((item,index) => {
           return <Post information={item} key={index} navigation={this.props.navigation}/>
         })
       }
-    </ScrollView>
+    </View>
     );
   }
 

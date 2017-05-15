@@ -2,19 +2,20 @@ export default () => {
   const FriendArray =[
     {
       id: 0,
-      UserId:1,
-      Name:"Michael Kaiser"
+      FriendId:1,
+
     },
     {
       id:1,
-      UserId:2,
-      Name:"Json Johnson"
+      FriendId:2,
+
     },
     {
       id:2,
-      UserId:3,
-      Name:"zozo"
-    }
+      FriendId:3,
+      
+    },
+
   ];
   return FriendArray;
 }

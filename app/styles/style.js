@@ -461,7 +461,9 @@ WebPreview2: {
     paddingRight: 0,
     paddingLeft: 0,
     paddingBottom: 8,
+
   },
+
   AcceptIcon: {
     flex: 1,
     width: 30,

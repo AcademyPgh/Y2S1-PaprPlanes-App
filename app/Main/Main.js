@@ -7,7 +7,8 @@ import {
   TextInput,
   StyleSheet,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView,
 
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
@@ -25,6 +26,7 @@ import MyCameraRoll from '../CreatePost/MyCameraRoll';
 import CreatePicPost from '../CreatePost/CreatePicPost';
 import SearchPage from './SearchPage';
 import Welcome from '../SignUpLogIn/Welcome';
+import CounterBarModal from './CounterBarModal';
 
 
 class Main extends React.Component {
@@ -57,8 +59,12 @@ class Main extends React.Component {
           <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>
         </View>
         </View>
+        <ScrollView>
           <PostList  PostData={this.state.PostData} navigation = {this.props.navigation}/>
+        </ScrollView>
+
           <FriendRequest/>
+
 
   </View>
     );
