@@ -17,7 +17,7 @@ import backarrow from '../Resources/backarrow.png';
 import closeIcon from '../Resources/closeIcon.png';
 import swipeArrow from '../Resources/swipeArrow.png';
 import getPost from '../getPost';
-import getFriend from '../getFriend';
+import getFriend from '../getUser';
 import getPostAccess from '../getPostAccess';
 import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
 
@@ -62,8 +62,6 @@ class PostPassMain extends React.Component {
     console.warn(PassObject.idPassArray);
     console.warn(global.userId);
     //ADD IN ABILITY TO PASS FRIEND IDS AND POST ID TO DATABASE
-
-
     return PassObject
     navigate('Main')
   }
