@@ -561,6 +561,7 @@ WebPreview2: {
   LeftContainer: {
     flex: 1,
     justifyContent: 'center',
+    marginLeft: 5,
   },
   MiddleContainer: {
     flex: 8,
@@ -569,6 +570,7 @@ WebPreview2: {
   RightContainer: {
     flex: 1,
     justifyContent: 'center',
+    marginRight: 5,
   },
   ProfilePic: {
     width: 50,
@@ -655,13 +657,14 @@ WebPreview2: {
     color: '#D6D6D6',
   },
   SearchOne: {
-    flex: 0,
+    flex: 2,
     flexDirection: 'column',
     justifyContent: 'center',
     backgroundColor: '#373435',
     paddingTop: 3,
-    paddingBottom: 3,
+    paddingBottom: 11,
     alignItems: 'center',
+
   },
   UserNameContainer: {
     flex: 0,

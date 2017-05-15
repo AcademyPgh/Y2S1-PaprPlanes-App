@@ -13,6 +13,7 @@
     "react-native-animated-tabs": "^1.1.0",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-checkbox": "^1.1.0",
+    "react-native-modal": "^2.4.0",
     "react-native-modal-dropdown": "^0.4.2",
     "react-native-scrollable-tab-view": "^0.6.5",
     "react-native-svg-image": "^1.1.0",

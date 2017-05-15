@@ -63,7 +63,7 @@ class Main extends React.Component {
           <PostList  PostData={this.state.PostData} navigation = {this.props.navigation}/>
         </ScrollView>
 
-          <FriendRequest/>
+        <FriendRequest/>
 
 
   </View>

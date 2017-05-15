@@ -12,6 +12,7 @@ import {
 import PostCount from '../getPost';
 import style from '../styles/style';
 import profile from '../Resources/profile.jpg';
+import CounterBarModal from './CounterBarModal';
 
 class CounterBar extends React.Component {
   constructor(props){
@@ -35,7 +36,7 @@ class CounterBar extends React.Component {
    }
    return sum;
  }
- 
+
  rightCounter(){
    for(var i = 0; i<this.state.PostCount.length; i++)
    {
@@ -54,7 +55,7 @@ class CounterBar extends React.Component {
       <View style = {style.LeftContainer}>
         <Text style = {style.CounterLeft}>{this.totalCounter()}</Text>
         </View>
-        <TouchableOpacity onPress={() => { navigate('SearchPage')}}><Image source={profile} style={style.ProfilePic}/></TouchableOpacity>
+        <CounterBarModal/>
       <View style = {style.RightContainer}>
         <Text style = {style.CounterRight}>{this.rightCounter()}</Text>
         </View>
