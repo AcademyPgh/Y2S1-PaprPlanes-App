@@ -11,13 +11,12 @@ import {
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
-import style from './style';
-import getUser from './getUser'
-import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
+import style from '../styles/style';
+import getUser from '../getUser'
+import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
 import logo from '../Resources/logo-200.png';
 import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
-import {setUserId, getUserId} from './globalSet';
 import mac from '../Resources/mac&c.jpg';
 import backarrow from '../Resources/backarrow.png';
 

@@ -8,30 +8,30 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-
 } from 'react-native';
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
-import style from './style';
-import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
+import style from '../styles/style';
+import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
 import backarrow from '../Resources/backarrow.png';
+import closeIcon from '../Resources/closeIcon.png';
 
-class CreateTextPost extends React.Component {
+class CreateLinkPost extends React.Component {
   constructor(props){
    super(props);
 
    this.state = {
     currentCaption: '',
-    currentText: '',
+    currentLink: '',
    }
-   this.changeText = this.changeText.bind(this);
+   this.changeLink = this.changeLink.bind(this);
    this.changeCaption = this.changeCaption.bind(this);
  }
 
- changeText(text){
+ changeLink(link){
   this.setState({
-    currentText: text,
+    currentLink: link,
   })
 }
  changeCaption(caption){
@@ -39,29 +39,31 @@ class CreateTextPost extends React.Component {
     currentCaption: caption,
   })
 }
-static navigationOptions = {
+
+  static navigationOptions = {
     headerStyle:{ backgroundColor: '#373435', marginTop: 20},
     headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
-    title: 'Text Post',
-    backButton: '#FFF',
+    title: 'Link Post',
 }
-render(){
+  render(){
 
 const { navigate } = this.props.navigation;
-
 return (
   <View style = {style.View3}>
+
   <View style = {style.container2}>
-  <TextInput style = {style.TextField} placeholder = 'Text' autoCapitalize = 'none'/>
-  <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
+  <TextInput style = {style.TextField}  onChangeText = {this.changeLink} placeholder = 'Link' autoCapitalize = 'none'/>
+  <TextInput style = {style.TextField} onChangeText = {this.changeCaption} placeholder = 'Caption' autoCapitalize = 'none' />
+  <TextInput style = {style.WebPreview} placeholder = 'Web Preview' autoCapitalize = 'none' />
   </View>
   <View style = {style.container}>
   <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {postInfo: this.state})}} ><LogInText>Send</LogInText></TouchableOpacity>
 </View>
   </View>
+
     );
   }
 
 }
 
-export default CreateTextPost;
+export default CreateLinkPost;

@@ -9,11 +9,11 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import style from './style';
+import style from '../styles/style';
 import CreateTextPost2 from '../Resources/createtextpost2.png';
 import camera2 from '../Resources/camera2.png';
 import link2 from '../Resources/link2.png';
-import ModalDropdown from 'react-native-modal-dropdown';
+
 
 
 

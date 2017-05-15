@@ -9,7 +9,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import style from './style';
+import style from '../styles/style';
 import MyCheckBox from './MyCheckBox';
 
 

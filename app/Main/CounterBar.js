@@ -9,9 +9,9 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import PostCount from './getPost';
-import TotalCount from './getUser';
-import style from './style';
+import PostCount from '../getPost';
+import TotalCount from '../getUser';
+import style from '../styles/style';
 import profile from '../Resources/profile.jpg';
 
 class CounterBar extends React.Component {

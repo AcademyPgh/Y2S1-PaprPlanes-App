@@ -13,18 +13,18 @@ import {
 import { StackNavigator } from 'react-navigation';
 import PostList from './PostList';
 import CounterBar from './CounterBar';
-import getPost from './getPost';
-import style from './style';
+import getPost from '../getPost';
+import style from '../styles/style';
 import createtextpost2 from '../Resources/createtextpost2.png';
 import camera2 from '../Resources/camera2.png';
 import link2 from '../Resources/link2.png';
 import FriendRequest from './FriendRequest';
 import Search from './Search';
-import OurCamera from './OurCamera';
-import MyCameraRoll from './MyCameraRoll';
-import CreatePicPost from './CreatePicPost';
+import OurCamera from '../CreatePost/OurCamera';
+import MyCameraRoll from '../CreatePost/MyCameraRoll';
+import CreatePicPost from '../CreatePost/CreatePicPost';
 import SearchPage from './SearchPage';
-import Welcome from './Welcome';
+import Welcome from '../SignUpLogIn/Welcome';
 
 
 class Main extends React.Component {

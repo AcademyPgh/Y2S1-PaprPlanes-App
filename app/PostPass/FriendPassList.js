@@ -9,13 +9,13 @@ import {
   Image,
   ScrollView,
 } from 'react-native';
-import Post from './Post'
-import style from './style'
+import Post from '../Main/Post'
+import style from '../styles/style';
 import FriendPass from './FriendPass'
 
 class FriendPassList extends React.Component {
   static navigationOptions = {
-  
+
 }
   render(){
     return (

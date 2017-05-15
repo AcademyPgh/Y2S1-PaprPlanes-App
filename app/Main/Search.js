@@ -10,7 +10,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-import style from './style';
+import style from '../styles/style';
 import search from '../Resources/search.png';
 import profile from '../Resources/profile.jpg';
 

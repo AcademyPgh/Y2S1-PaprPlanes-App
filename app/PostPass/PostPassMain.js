@@ -10,17 +10,16 @@ import {
   TouchableOpacity
 
 } from 'react-native';
-import { StackNavigator } from 'react-navigation'
-import getPost from './getPost'
-import getFriend from './getFriend'
-import style from './style'
-import FriendPassList from './FriendPassList'
+import { StackNavigator } from 'react-navigation';
+import style from '../styles/style';
+import FriendPassList from './FriendPassList';
 import backarrow from '../Resources/backarrow.png';
 import closeIcon from '../Resources/closeIcon.png';
 import swipeArrow from '../Resources/swipeArrow.png';
-import {setUserId, getUserId} from './globalSet';
-import getPostAccess from './getPostAccess';
-import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
+import getPost from '../getPost';
+import getFriend from '../getFriend';
+import getPostAccess from '../getPostAccess';
+import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
 
 class PostPassMain extends React.Component {
   static navigationOptions = {

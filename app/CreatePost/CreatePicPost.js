@@ -12,10 +12,9 @@ import {
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
-import style from './style';
-import PlaneText from './PlaneText';
-import {LogInText, textText} from './textText';
-import PostPassMain from'./PostPassMain';
+import style from '../styles/style';
+import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
+import PostPassMain from '../PostPass/PostPassMain';
 import OurCamera from './OurCamera';
 import MyCameraRoll from './MyCameraRoll';
 import backarrow from '../Resources/backarrow.png'

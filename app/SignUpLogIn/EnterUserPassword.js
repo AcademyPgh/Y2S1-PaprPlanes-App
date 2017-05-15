@@ -9,18 +9,21 @@ import {
   Image,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import style from './style';
-import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
+import style from '../styles/style';
+import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
 import logo from '../Resources/logo-200.png';
 import backarrow from '../Resources/backarrow.png';
 
 
- class EnterHandle extends React.Component {
-
+ class EnterUserPassword extends React.Component {
 componentDidMount(){
   this.props.setLocked();
 }
-
+static navigationOptions = {
+  headerStyle:{ backgroundColor: '#373435'},
+  headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
+  header: (navigation, header) => { return (<Text style={{ backgroundColor: '#373435', marginTop: 20}}><Image source={logo} style={{width: 50, height: 50, alignItems: 'center'}} />Sign Up</Text>) },
+};
  render() {
    return(
    <View style = {style.View4}>
@@ -30,8 +33,8 @@ componentDidMount(){
    </View>
    <View style = {style.Email2}>
    <View style = {style.container5}>
-   <PlaneText2>What is your username?</PlaneText2>
-       <TextInput value={this.props.currentHandle} onChangeText={this.props.changeHandle} style = {style.TextField4} placeholder = 'Username' placeholderTextColor = "#D6D6D6" autoCapitalize = 'none'/>
+   <PlaneText2>What is your password?</PlaneText2>
+       <TextInput value={this.props.currentPassword} onChangeText={this.props.changePassword} style = {style.TextField4} placeholder = 'Password' placeholderTextColor = "#D6D6D6" autoCapitalize = 'none'/>
      </View>
      </View>
      <View style = {style.swipe3}>
@@ -43,4 +46,5 @@ componentDidMount(){
  );
  }
  }
-export default EnterHandle;
+
+export default EnterUserPassword;

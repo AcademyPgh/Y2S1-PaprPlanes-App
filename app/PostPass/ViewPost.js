@@ -14,9 +14,9 @@ import {
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
-import style from './style';
-import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
-import Post from './Post';
+import style from '../styles/style';
+import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
+import Post from '../Main/Post';
 import cathedral from '../Resources/download.jpeg';
 
 class ViewPost extends React.Component {

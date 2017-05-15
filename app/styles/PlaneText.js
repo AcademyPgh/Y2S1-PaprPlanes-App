@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
-import style from './style';
+import style from '../styles/style';
 
 export class PlaneText extends React.Component {
   render (){

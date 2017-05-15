@@ -10,7 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import style from './style';
+import style from '../styles/style';
 import TabNavigator from 'react-native-tab-navigator';
 import ScrollableTabView ,{ ScrollableTabBar, } from 'react-native-scrollable-tab-view';
 import EnterUserName from './EnterUserName';
@@ -19,8 +19,8 @@ import EnterHandle from './EnterHandle';
 import EnterEmail from './EnterEmail';
 import EnterDateOfBirth from './EnterDateOfBirth';
 import logo from '../Resources/logo-200.png';
-import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
-import PostPassMain from './PostPassMain';
+import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
+import PostPassMain from '../PostPass/PostPassMain';
 
  class SignUp2 extends React.Component {
    constructor(props) {

@@ -9,9 +9,9 @@ import {
   Image,
 } from 'react-native';
 
-import PostCount from './getPost'
-import TotalCount from './getUser'
-import style from './style'
+import PostCount from '../getPost'
+import TotalCount from '../getUser'
+import style from '../styles/style';
 import Search from './Search'
 
 class SearchPage extends React.Component {

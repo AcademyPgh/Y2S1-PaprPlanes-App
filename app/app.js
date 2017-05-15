@@ -13,27 +13,25 @@ import {
 
 import GestureRecognizer, {swipeDirections} from 'react-native-swipe-gestures';
 import { StackNavigator } from 'react-navigation';
-import Main from './Main';
-import SignUp from './SignUp';
-import LogIn from './LogIn';
-import Axiosfile from './Axiosfile';
-import SearchPage from './SearchPage';
-import Welcome from './Welcome';
-import CreateTextPost from './CreateTextPost';
-import CreateLinkPost from './CreateLinkPost';
-import CreatePicPost from './CreatePicPost';
-import style from './style';
-import logo from '../Resources/logo-200.png';
-import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
-import SignUp1 from './SignUp1';
-import SignUp2 from './SignUp2';
-import OurCamera from './OurCamera';
-import MyCameraRoll from './MyCameraRoll';
-import PostPassMain from './PostPassMain';
-import mail from '../Resources/mail.png';
-import password from '../Resources/password.png';
-import Post from './Post'
-import ViewPost from './ViewPost'
+import Main from './Main/Main';
+import SignUp from './SignUpLogIn/SignUp';
+import LogIn from './SignUpLogIn/LogIn';
+import SearchPage from './Main/SearchPage';
+import Welcome from './SignUpLogIn/Welcome';
+import CreateTextPost from './CreatePost/CreateTextPost';
+import CreateLinkPost from './CreatePost/CreateLinkPost';
+import CreatePicPost from './CreatePost/CreatePicPost';
+import style from './styles/style';
+import logo from './Resources/logo-200.png';
+import {PlaneText, PlaneText2, textText, LogInText} from './styles/PlaneText';
+import SignUp2 from './SignUpLogIn/SignUp2';
+import OurCamera from './CreatePost/OurCamera';
+import MyCameraRoll from './CreatePost/MyCameraRoll';
+import PostPassMain from './PostPass/PostPassMain';
+import mail from './Resources/mail.png';
+import password from './Resources/password.png';
+import Post from './Main/Post'
+import ViewPost from './PostPass/ViewPost'
 
 
 class HomeScreen extends React.Component {
@@ -81,13 +79,9 @@ const PaprPlanes = StackNavigator({
   PlaneText2: {screen: PlaneText2},
   textText: {screen: textText},
   LogInText: {screen: LogInText},
-  SignUp1: { screen: SignUp1 },
   SignUp2: { screen: SignUp2 },
   OurCamera:{screen:OurCamera},
   MyCameraRoll:{screen:MyCameraRoll},
-
-  Axiosfile:{screen:Axiosfile},
-
   PostPassMain: { screen: PostPassMain },
   SearchPage: { screen: SearchPage },
   Welcome: { screen: Welcome },

@@ -10,7 +10,7 @@ import {
   ScrollView,
 } from 'react-native';
 import Post from './Post'
-import style from './style'
+import style from '../styles/style';
 
 
 class PostList extends React.Component {

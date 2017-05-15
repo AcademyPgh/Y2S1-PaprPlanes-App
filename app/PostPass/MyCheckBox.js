@@ -10,8 +10,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
 } from 'react-native';
-import style from './style';
-
+import style from '../styles/style';
 import Check from '../Resources/check.png'
 import unCheck from '../Resources/circle.png'
 

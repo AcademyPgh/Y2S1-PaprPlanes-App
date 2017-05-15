@@ -10,8 +10,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import style from './style';
-import {PlaneText, PlaneText2, textText, LogInText} from './PlaneText';
+import style from '../styles/style';
+import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
 import logo from '../Resources/logo-200.png';
 import arrow from '../Resources/arrowcontinue.png';
 import Welcome from './Welcome';
