@@ -57,7 +57,7 @@ class CounterBarModal extends React.Component {
               animationOutTiming = {100}
               backdropColor = "#373435">
 
-              
+
           <BlurView blurType='light' blurAmount = {7} alignItems= 'stretch' style={{ flex: 1, marginTop: 65, marginBottom: 80, flexDirection: 'column', alignItems: 'stretch', }}>
             <SearchModal hideModal = {this._hideModal}/>
             <Text>HELOOO</Text>
