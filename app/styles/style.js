@@ -662,7 +662,7 @@ WebPreview2: {
     justifyContent: 'center',
     backgroundColor: '#373435',
     paddingTop: 3,
-    paddingBottom: 11,
+    paddingBottom: 6,
     alignItems: 'center',
 
   },

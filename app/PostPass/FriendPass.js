@@ -24,7 +24,7 @@ class FriendPass extends React.Component {
 
             <Text style = {style.FriendPass}>{this.props.FriendList.Name}</Text>
               <View style ={style.CheckIcon}>
-                <MyCheckBox isChecked={this.props.FriendList.checked} UserId={this.props.FriendList.UserId} toggle={this.props.toggle} />
+                <MyCheckBox isChecked={this.props.FriendList.checked} UserId={this.props.FriendList.FriendId} toggle={this.props.toggle} />
             </View>
 
        </View>

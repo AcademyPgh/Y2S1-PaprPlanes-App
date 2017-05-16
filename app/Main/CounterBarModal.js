@@ -60,7 +60,7 @@ class CounterBarModal extends React.Component {
               backdropColor = "#202020"
               style = {styles.container}
               >
-          <View style={{ flex: 1, marginTop: 60, flexDirection: 'column', alignItems: 'stretch' }}>
+          <View style={{ flex: 1, marginTop: 65, flexDirection: 'column', alignItems: 'stretch' }}>
             <SearchModal hideModal = {this._hideModal}/>
           </View>
         </Modal>

@@ -17,7 +17,7 @@ import backarrow from '../Resources/backarrow.png';
 import closeIcon from '../Resources/closeIcon.png';
 import swipeArrow from '../Resources/swipeArrow.png';
 import getPost from '../getPost';
-import getFriend from '../getUser';
+import getFriend from '../getFriend';
 import getPostAccess from '../getPostAccess';
 import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
 
@@ -55,7 +55,7 @@ class PostPassMain extends React.Component {
     {
       if(this.state.FriendList[i].checked == true)
       {
-      PassObject.idPassArray.push (this.state.FriendList[i].UserId);
+      PassObject.idPassArray.push (this.state.FriendList[i].FriendId);
       }
     }
     console.log(PassObject.PostInfo);
@@ -71,7 +71,7 @@ class PostPassMain extends React.Component {
     temp = this.state.FriendList;
     for (var i = 0; i < temp.length; i++)
     {
-      if(temp[i].UserId === id)
+      if(temp[i].FriendId === id)
       {
         temp[i].checked = !temp[i].checked;
       }
