@@ -33,13 +33,13 @@ class ViewPost extends React.Component {
  static navigationOptions = {
    headerStyle:{ backgroundColor: '#373435', marginTop: 20},
    headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
-   title: 'Pass Your Post!',
 }
 
 picDisplay() {
   if (this.state.Type === 0) {
     return cathedral;
   }
+
   else {
     return null;
   }

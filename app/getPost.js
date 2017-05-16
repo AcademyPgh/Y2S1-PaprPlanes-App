@@ -44,6 +44,28 @@ export default () => {
       CurrentPost: false,
       UserId: 0,
     },
+    {
+      id: 2,
+      AuthorName: "zozo",
+      SenderName: "Json Johnson",
+      Type:2,
+      Caption: "Noooooo he is sick",
+      Content: "https://www.Imacoolguy.com",
+      RightCounter: 101,
+      CurrentPost: true,
+      UserId: 2,
+    },
+    {
+      id: 4,
+      AuthorName: "Michael Kaiser",
+      SenderName: "Ruby Makhol",
+      Type: 0,
+      Caption: "Look at this cool thing!",
+      Content: "this is a coolest picture",
+      RightCounter: 50,
+      CurrentPost: false,
+      UserId: 0,
+    },
 
   ];
   return postArray;

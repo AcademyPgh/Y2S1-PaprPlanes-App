@@ -20,7 +20,7 @@ import createtextpost2 from '../Resources/createtextpost2.png';
 import camera2 from '../Resources/camera2.png';
 import link2 from '../Resources/link2.png';
 import FriendRequest from './FriendRequest';
-import Search from './Search';
+import SearchBar from './SearchBar';
 import OurCamera from '../CreatePost/OurCamera';
 import MyCameraRoll from '../CreatePost/MyCameraRoll';
 import CreatePicPost from '../CreatePost/CreatePicPost';
