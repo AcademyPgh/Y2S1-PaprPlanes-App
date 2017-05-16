@@ -32,11 +32,13 @@ class CreatePicPost extends React.Component {
 const {navigate} = this.props.navigation;
 return (
   <View style = {style.View3}>
+  <View>
+  <TouchableOpacity style = {style.SignUp3} onPress={() => { navigate('OurCamera')}}><LogInText>Take a Photo</LogInText></TouchableOpacity>
+  <TouchableOpacity style = {style.SignUp4} onPress={() => { navigate('MyCameraRoll')}}><LogInText>Camera Roll</LogInText></TouchableOpacity>
+  </View>
     <View style = {style.container2}>
       <TextInput style = {style.TextField} placeholder = 'Caption' autoCapitalize = 'none' />
-      <Button onPress={() => { navigate('OurCamera')}} title='Take a Photo'></Button>
-      <Button onPress={() => { navigate('MyCameraRoll')}} title='Camera Roll'></Button>
-    </View>
+      </View>
     <View style = {style.container}>
       <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {PostInfo: ''})}} ><LogInText>Send</LogInText></TouchableOpacity>
     </View>

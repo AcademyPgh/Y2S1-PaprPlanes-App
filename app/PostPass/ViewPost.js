@@ -18,6 +18,7 @@ import style from '../styles/style';
 import {PlaneText, PlaneText2, textText, LogInText} from '../styles/PlaneText';
 import Post from '../Main/Post';
 import cathedral from '../Resources/download.jpeg';
+import shot from '../Resources/Untitled 2.png';
 
 class ViewPost extends React.Component {
   constructor(props){
