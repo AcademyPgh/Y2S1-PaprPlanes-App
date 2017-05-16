@@ -11,6 +11,7 @@
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
     "react-native-animated-tabs": "^1.1.0",
+    "react-native-blur": "^3.0.0-alpha",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-checkbox": "^1.1.0",
     "react-native-modal": "^2.4.0",

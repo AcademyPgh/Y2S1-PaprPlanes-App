@@ -46,7 +46,7 @@ class Main extends React.Component {
   render(){
     const { navigate } = this.props.navigation;
     return (
-  <View>
+  <View style = {{flex: 1}} >
     <CounterBar navigation = {this.props.navigation}/>
       <View style={style.CreatePost}>
         <View style={style.LinkContainer}>

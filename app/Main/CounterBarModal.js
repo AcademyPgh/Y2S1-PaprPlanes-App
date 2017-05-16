@@ -16,9 +16,7 @@ import profile from '../Resources/profile.jpg';
 import styles from '../styles/modalStyles';
 import SearchModal from './SearchModal';
 import Modal from 'react-native-modal'
-
-
-
+import { BlurView } from 'react-native-blur';
 
 
 class CounterBarModal extends React.Component {
@@ -54,15 +52,17 @@ class CounterBarModal extends React.Component {
         <Modal isVisible={this.state.isModalVisible}
               backdropOpacity = {0}
               animationIn = "slideInDown"
-              animationInTiming = {130}
+              animationInTiming = {100}
               animationOut = "slideOutUp"
-              animationOutTiming = {130}
-              backdropColor = "#202020"
-              style = {styles.container}
-              >
-          <View style={{ flex: 1, marginTop: 65, flexDirection: 'column', alignItems: 'stretch' }}>
+              animationOutTiming = {100}
+              backdropColor = "#373435">
+
+              
+          <BlurView blurType='light' blurAmount = {7} alignItems= 'stretch' style={{ flex: 1, marginTop: 65, marginBottom: 80, flexDirection: 'column', alignItems: 'stretch', }}>
             <SearchModal hideModal = {this._hideModal}/>
-          </View>
+            <Text>HELOOO</Text>
+          </BlurView>
+
         </Modal>
       </View>
      );
