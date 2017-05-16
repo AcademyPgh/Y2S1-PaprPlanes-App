@@ -23,6 +23,7 @@ class Search extends React.Component {
         backgroundColor: '#373435',
         alignItems: 'stretch',
       }}>
+
         <View style = {style.SearchOne}>
           <TouchableOpacity onPress={() => {this.props.hideModal()}}><Image source={profile} style = {style.ProfilePic}/></TouchableOpacity>
           <View style={style.SearchTwo}>
@@ -33,6 +34,7 @@ class Search extends React.Component {
           </View>
         </View>
       </View>
+    
     );
   }
 }

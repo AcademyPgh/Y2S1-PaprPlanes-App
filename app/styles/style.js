@@ -514,8 +514,8 @@ WebPreview2: {
     marginRight: 20,
     marginLeft: 20,
     paddingTop: 8,
-    paddingRight: 8,
-    paddingLeft: 8,
+    paddingRight: 10,
+    paddingLeft: 10,
     paddingBottom: 8,
   },
   PostLinkBoxSub: {

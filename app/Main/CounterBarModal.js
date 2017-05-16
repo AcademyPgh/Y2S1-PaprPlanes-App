@@ -17,6 +17,7 @@ import styles from '../styles/modalStyles';
 import SearchModal from './SearchModal';
 import Modal from 'react-native-modal'
 import { BlurView } from 'react-native-blur';
+//import List from './SearchListlist';
 
 
 class CounterBarModal extends React.Component {
@@ -36,12 +37,11 @@ class CounterBarModal extends React.Component {
  _hideModal = () => this.setState({ isModalVisible: false })
 
 
+
+
    render() {
      var modalBackgroundStyle = {
        backgroundColor: this.state.transparent ? 'rgba(0, 0, 0, 0.5)' : '#f5fcff'};
-     var innerContainerTransparentStyle = this.state.transparent
-       ? {backgroundColor: '#fff', padding: 20}
-       : null;
 
      return (
 
@@ -55,12 +55,14 @@ class CounterBarModal extends React.Component {
               animationInTiming = {100}
               animationOut = "slideOutUp"
               animationOutTiming = {100}
-              backdropColor = "#373435">
+              backdropColor = "#373435"
+              style = {{marginLeft: 0, marginRight: 0}}>
 
 
-          <BlurView blurType='light' blurAmount = {7} alignItems= 'stretch' style={{ flex: 1, marginTop: 65, marginBottom: 80, flexDirection: 'column', alignItems: 'stretch', }}>
+          <BlurView blurType='light' blurAmount = {8} alignItems= 'stretch' style={{ flex: 1, marginTop: 65, marginBottom: 80, flexDirection: 'column', alignItems: 'stretch', }}>
             <SearchModal hideModal = {this._hideModal}/>
             <Text>HELOOO</Text>
+
           </BlurView>
 
         </Modal>
