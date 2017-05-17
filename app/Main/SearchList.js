@@ -7,10 +7,12 @@ import {
   TextInput,
   StyleSheet,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 
 import Users from '../getUser'
+import SearchResult from './SearchResult'
 
 
 
@@ -19,16 +21,21 @@ class SearchList extends React.Component {
    super(props);
 
    this.state={
-     UserList: getUser()
+     UserList: Users()
    }
  }
 
   render() {
     return(
-      <View>
-
-      </View>
+      <ScrollView>
+        {
+        this.state.UserList.map((item,index) => {
+          return <SearchResult information={item} key={index} navigation={this.props.navigation}/>
+        })
+      }
+    </ScrollView>
 
     )
   }
 }
+export default SearchList;

@@ -15,6 +15,13 @@ import search from '../Resources/search.png';
 import profile from '../Resources/profile.jpg';
 
 class Search extends React.Component {
+  constructor(props){
+   super(props);
+   this.state={
+     isModalVisible: false,
+     SearchInput: ''
+   }
+ }
   render(){
     return (
       <View style = {{
@@ -28,13 +35,13 @@ class Search extends React.Component {
           <TouchableOpacity onPress={() => {this.props.hideModal()}}><Image source={profile} style = {style.ProfilePic}/></TouchableOpacity>
           <View style={style.SearchTwo}>
           <View style={style.SearchThree}>
-            <TextInput style = {style.SearchText} placeholder = 'Search' placeholderTextColor = '#D6D6D6' autoCapitalize = 'none' ></TextInput>
+            <TextInput style = {style.SearchText} value={this.props.searchInput} onChangeText = {this.props.Sb._searchBarDisplay} placeholder = 'Search' placeholderTextColor = '#D6D6D6' autoCapitalize = 'none' ></TextInput>
           </View>
-            <TouchableOpacity onPress={() => { navigate('')}} ><Image source={search} style={style.SearchIcon}/></TouchableOpacity>
+            <TouchableOpacity><Image source={search} style={style.SearchIcon}/></TouchableOpacity>
           </View>
         </View>
       </View>
-    
+
     );
   }
 }

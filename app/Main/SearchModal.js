@@ -13,7 +13,7 @@ import {
 import PostCount from '../getPost'
 import TotalCount from '../getUser'
 import style from '../styles/style';
-import Search from './Search'
+import SearchBar from './SearchBar'
 
 class SearchModal extends React.Component {
   constructor(props){
@@ -27,7 +27,7 @@ class SearchModal extends React.Component {
   render(){
     return (
     <View>
-      <Search hideModal = {this.props.hideModal}/>
+      <SearchBar hideModal = {this.props.hideModal} Sb={this.props.Sb} searchInput = {this.props.searchInput}/>
     </View>
     );
   }

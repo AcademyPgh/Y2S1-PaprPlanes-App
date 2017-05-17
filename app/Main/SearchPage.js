@@ -12,7 +12,7 @@ import {
 import PostCount from '../getPost'
 import TotalCount from '../getUser'
 import style from '../styles/style';
-import Search from './Search'
+import SearchBar from './SearchBar'
 
 class SearchPage extends React.Component {
   constructor(props){
@@ -33,7 +33,7 @@ class SearchPage extends React.Component {
   render(){
     return (
     <View>
-      <Search/>
+      <SearchBar/>
     </View>
     );
   }
