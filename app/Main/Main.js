@@ -46,11 +46,9 @@ class Main extends React.Component {
   render(){
     const { navigate } = this.props.navigation;
     return (
-<<<<<<< HEAD
+
   <View style = {{flex: 1}} >
-=======
-  <View style = {{flex: 1, marginBottom: 10}}>
->>>>>>> SarahP
+
     <CounterBar navigation = {this.props.navigation}/>
       <View style={style.CreatePost}>
         <View style={style.LinkContainer}>
