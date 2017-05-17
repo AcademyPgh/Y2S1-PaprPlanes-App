@@ -44,7 +44,9 @@ class CreateTextPost extends React.Component {
     headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
     title: 'Text Post',
     backButton: '#FFF',
-}
+
+  }
+
   render(){
 
     const { navigate } = this.props.navigation;
@@ -61,7 +63,6 @@ class CreateTextPost extends React.Component {
       </View>
         );
       }
-
     }
 
 export default CreateTextPost;

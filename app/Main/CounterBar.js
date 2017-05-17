@@ -52,13 +52,13 @@ class CounterBar extends React.Component {
     const { navigate } = this.props.navigation;
     return (
       <View style = {style.CounterBoxMain}>
-      <View style = {style.LeftContainer}>
-        <Text style = {style.CounterLeft}>{this.totalCounter()}</Text>
+        <View style = {style.LeftContainer}>
+          <Text style = {style.CounterLeft}>{this.totalCounter()}</Text>
         </View>
-        <CounterBarModal/>
+      <CounterBarModal/>
       <View style = {style.RightContainer}>
         <Text style = {style.CounterRight}>{this.rightCounter()}</Text>
-        </View>
+      </View>
     </View>
     );
   }
