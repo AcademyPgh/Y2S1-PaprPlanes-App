@@ -14,14 +14,31 @@ import style from '../styles/style';
 import search from '../Resources/search.png';
 import profile from '../Resources/profile.jpg';
 
-class Search extends React.Component {
+class SearchBar extends React.Component {
   constructor(props){
    super(props);
    this.state={
      isModalVisible: false,
      SearchInput: ''
    }
+    this.handleSearchBarDisplay = this.handleSearchBarDisplay.bind(this);
+    this.handleSearchClick = this.handleSearchClick.bind(this);
  }
+
+handleSearchBarDisplay= (e) => {
+     this.setState({SearchInput: e.target.value});
+
+   }
+
+ handleSearchClick() {
+    () => {this.props.search._searchListDisplay(this.state.SearchInput)};
+    console.warn(this.state.SearchInput);
+    this.setState({SearchInput: ''});
+
+  }
+
+
+
   render(){
     return (
       <View style = {{
@@ -35,9 +52,9 @@ class Search extends React.Component {
           <TouchableOpacity onPress={() => {this.props.hideModal()}}><Image source={profile} style = {style.ProfilePic}/></TouchableOpacity>
           <View style={style.SearchTwo}>
           <View style={style.SearchThree}>
-            <TextInput style = {style.SearchText} value={this.props.searchInput} onChangeText = {this.props.Sb._searchBarDisplay} placeholder = 'Search' placeholderTextColor = '#D6D6D6' autoCapitalize = 'none' ></TextInput>
+            <TextInput style = {style.SearchText} value = {this.state.SearchInput} onChange = {this.handleSearchBarDisplay} placeholder = 'Search' placeholderTextColor = '#D6D6D6' autoCapitalize = 'none' ></TextInput>
           </View>
-            <TouchableOpacity><Image source={search} style={style.SearchIcon}/></TouchableOpacity>
+            <TouchableOpacity onPress = {() => {this.handleSearchClick()} }><Image source = {search}  style = {style.SearchIcon}/></TouchableOpacity>
           </View>
         </View>
       </View>
@@ -47,4 +64,4 @@ class Search extends React.Component {
 }
 
 
-export default Search;
+export default SearchBar;

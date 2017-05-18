@@ -27,7 +27,7 @@ class SearchModal extends React.Component {
   render(){
     return (
     <View>
-      <SearchBar hideModal = {this.props.hideModal} Sb={this.props.Sb} searchInput = {this.props.searchInput}/>
+      <SearchBar hideModal = {this.props.hideModal} search = {this.props.search} searchInput = {this.props.searchInput}/>
     </View>
     );
   }

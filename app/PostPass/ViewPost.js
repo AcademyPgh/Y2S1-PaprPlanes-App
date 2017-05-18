@@ -58,7 +58,7 @@ return (
            <Text style = {style.CreatorName}>{this.state.PostInfo.AuthorName}</Text>
            <Text style = {style.CreatorName}>{this.state.PostInfo.Text}</Text>
            <Image style = {style.cathedral} source = {this.picDisplay()}/>
-           <Text style = {style.WebPreview2}>{this.state.PostInfo.Caption}</Text>
+           <Text style = {style.ViewPostLinkBoxMain} >{this.state.PostInfo.Caption}</Text>
 </View>
 <View style = {style.container}>
         <TouchableOpacity style = {style.SignUp2} onPress={() => {navigate('PostPassMain', {PostInfo: this.state.PostInfo})} } >

@@ -17,6 +17,7 @@ import SearchModal from './SearchModal';
 import Modal from 'react-native-modal'
 import { BlurView } from 'react-native-blur';
 import List from './SearchList';
+import getUser from '../getUser'
 
 
 class CounterBarModal extends React.Component {
@@ -24,12 +25,15 @@ class CounterBarModal extends React.Component {
    super(props);
 
    this.state={
+
+     Users: getUser(),
      isModalVisible: false,
-     SearchInput: ''
+     SearchResults: [],
    }
-   this._showModal= this._showModal.bind(this);
+   this._showModal = this._showModal.bind(this);
    this._hideModal = this._hideModal.bind(this);
-   this._searchBarDisplay = this._searchBarDisplay.bind(this);
+   this._searchListDisplay = this._searchListDisplay.bind(this);
+
  }
 
 
@@ -38,15 +42,15 @@ class CounterBarModal extends React.Component {
  _hideModal = () => this.setState({ isModalVisible: false })
 
 
- _searchBarDisplay(e) {
-     this.setState({
-       SearchInput: e.target.value,
 
-     })
-     console.warn(this.state.SearchInput);
-   }
-_searchListDisplay() {
+_searchListDisplay(string) {
+  for(var i = 0; i<this.state.Users.size; i++){
+    if (this.state.Users[i].Handle.includes(string) === true){
 
+      this.state.SearchResults.push(this.state.Users[i]);
+
+    }
+  }
 }
 
 
@@ -57,10 +61,10 @@ _searchListDisplay() {
      return (
 
       <View>
-        <TouchableOpacity onPress={this._showModal}>
-          <Image source={profile} style = {style.ProfilePic}/>
+        <TouchableOpacity onPress = {this._showModal}>
+          <Image source = {profile} style = {style.ProfilePic}/>
         </TouchableOpacity>
-        <Modal isVisible={this.state.isModalVisible}
+        <Modal isVisible = {this.state.isModalVisible}
               backdropOpacity = {0}
               animationIn = "slideInDown"
               animationInTiming = {100}
@@ -70,8 +74,9 @@ _searchListDisplay() {
               style = {{marginLeft: 0, marginRight: 0}}>
 
 
-          <BlurView blurType='light' blurAmount = {8} alignItems= 'stretch' style={{ flex: 1, marginTop: 65, marginBottom: 0, flexDirection: 'column', alignItems: 'stretch', }}>
-            <SearchModal hideModal = {this._hideModal} Sb={this._searchBarDisplay} searchInput = {this.state.SearchInput}/>
+          <BlurView blurType ='light' blurAmount = {8} alignItems= 'stretch' style={{ flex: 1, marginTop: 65, marginBottom: 0, flexDirection: 'column', alignItems: 'stretch', }}>
+            <SearchModal hideModal = {this._hideModal} search = {this._searchListDisplay} searchInput = {this.state.SearchInput}/>
+            <List searchResults = {this.state.SearchResults}/>
           </BlurView>
 
         </Modal>

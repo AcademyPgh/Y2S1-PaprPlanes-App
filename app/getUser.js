@@ -3,7 +3,7 @@ export default () => {
     {
       id: 0,
       Name:"Michael Kaiser",
-      Handle:"MWK",
+      Handle:"mwk",
       Password:"1234",
       Email:"test1@test.com",
       dob:"03/18/1992",
@@ -23,7 +23,7 @@ export default () => {
     {
       id:2,
       Name:"zozo",
-      Handle:"ZZ",
+      Handle:"zz",
       Password:"0000",
       Email:"test3@test.com",
       dob:"05/04/1993",

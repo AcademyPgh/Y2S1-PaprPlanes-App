@@ -17,19 +17,12 @@ import SearchResult from './SearchResult'
 
 
 class SearchList extends React.Component {
-  constructor(props){
-   super(props);
-
-   this.state={
-     UserList: Users()
-   }
- }
 
   render() {
     return(
       <ScrollView>
         {
-        this.state.UserList.map((item,index) => {
+        this.props.searchResults.map((item,index) => {
           return <SearchResult information={item} key={index} navigation={this.props.navigation}/>
         })
       }

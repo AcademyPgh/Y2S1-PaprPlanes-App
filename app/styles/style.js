@@ -847,6 +847,25 @@ WebPreview2: {
   cathedral: {
     resizeMode: 'cover',
   },
+  ViewPostLinkBoxMain: {
+    flex: 0,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: '#FFFFFF',
+    borderRadius: 9,
+    borderWidth: 2,
+    borderColor: '#5A5858',
+    marginTop: 15,
+    marginRight: 20,
+    marginLeft: 20,
+    paddingTop: 8,
+    paddingRight: 10,
+    paddingLeft: 10,
+    paddingBottom: 8,
+    height: 60,
+    width: 275,
+    textAlign: "center"
+  },
 });
 
 

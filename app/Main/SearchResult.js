@@ -33,10 +33,7 @@ render(){
     <View style = {style.PostLinkBoxMain}>
 
           <View style = {style.PostLinkBoxSub}>
-
-              <Text style = {style.SenderName}></Text>
-              <Text style = {style.CreatorName}></Text>
-
+              <Text style = {style.SenderName}>{this.props.information.Handle}</Text>
           </View>
     </View>
 
