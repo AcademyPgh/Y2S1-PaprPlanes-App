@@ -13,7 +13,6 @@ import {
 import PostCount from '../getPost';
 import style from '../styles/style';
 import profile from '../Resources/profile.jpg';
-import styles from '../styles/modalStyles';
 import SearchModal from './SearchModal';
 import Modal from 'react-native-modal'
 import { BlurView } from 'react-native-blur';
@@ -71,7 +70,7 @@ _searchListDisplay() {
               style = {{marginLeft: 0, marginRight: 0}}>
 
 
-          <BlurView blurType='light' blurAmount = {8} alignItems= 'stretch' style={{ flex: 1, marginTop: 65, marginBottom: 80, flexDirection: 'column', alignItems: 'stretch', }}>
+          <BlurView blurType='light' blurAmount = {8} alignItems= 'stretch' style={{ flex: 1, marginTop: 65, marginBottom: 0, flexDirection: 'column', alignItems: 'stretch', }}>
             <SearchModal hideModal = {this._hideModal} Sb={this._searchBarDisplay} searchInput = {this.state.SearchInput}/>
           </BlurView>
 

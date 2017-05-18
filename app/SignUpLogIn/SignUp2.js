@@ -140,8 +140,8 @@ changeFullName(fullName) {
   // })
    const { navigate } = this.props.navigation;
 
-   return (
-     <ScrollableTabView
+return (
+  <ScrollableTabView
        locked = {this.state.locked}
        initialPage={0}
        renderTabBar={() => <View />}

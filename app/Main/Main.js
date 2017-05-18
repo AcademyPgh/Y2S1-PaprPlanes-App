@@ -48,7 +48,6 @@ class Main extends React.Component {
     return (
 
   <View style = {{flex: 1}} >
-
     <CounterBar navigation = {this.props.navigation}/>
       <View style={style.CreatePost}>
         <View style={style.LinkContainer}>
@@ -66,8 +65,6 @@ class Main extends React.Component {
         </ScrollView>
 
         <FriendRequest/>
-
-
   </View>
     );
   }
