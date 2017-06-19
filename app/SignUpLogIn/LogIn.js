@@ -19,6 +19,7 @@ import mail from '../Resources/mail.png';
 import password from '../Resources/password.png';
 import mac from '../Resources/mac&c.jpg';
 import backarrow from '../Resources/backarrow.png';
+import axios from 'axios';
 
 class LogIn extends React.Component {
   constructor(props) {
@@ -28,12 +29,14 @@ class LogIn extends React.Component {
       //backgroundColor: '#fff',
       currentEmail:"",
       currentPassword:"",
+      user: [],
 
     };
     this.changeEmail = this.changeEmail.bind(this);
     this.changePassword = this.changePassword.bind(this);
     this.onSwipeLeft = this.onSwipeLeft.bind(this);
-    this.goLogin = this.goLogin.bind(this);
+    //this.goLogin = this.goLogin.bind(this);
+    this.userCheck = this.userCheck.bind(this);
 
   }
 
@@ -45,46 +48,58 @@ class LogIn extends React.Component {
 }
 
 
-goLogin(){
+// goLogin(){
+//
+// for(var i=0;i<this.state.UserData.length;i++)
+//    {
+//
+//   if ((this.state.UserData[i].Email === this.state.currentEmail)&&(this.state.UserData[i].Password === this.state.currentPassword))
+//     {
+//       console.warn( "true login");
+//       console.warn("User ID: " + this.state.UserData[i].id);
+//       global.userId = this.state.UserData[i].id;
+//       return true;
+//     }
+//   }
+//   console.warn("false login");
+//   return false;
+//
+// }
 
-for(var i=0;i<this.state.UserData.length;i++)
-   {
-
-  if ((this.state.UserData[i].Email === this.state.currentEmail)&&(this.state.UserData[i].Password === this.state.currentPassword))
-    {
-      console.warn( "true login");
-      console.warn("User ID: " + this.state.UserData[i].id);
-      global.userId = this.state.UserData[i].id;
-      return true;
-    }
-  }
-  console.warn("false login");
-  return false;
-
-}
-
-  changeEmail(email) {
+changeEmail(email) {
       this.setState({
         currentEmail: email,
       })
     }
 
-  changePassword(pass) {
+changePassword(pass) {
       this.setState({
         currentPassword: pass,
       })
     }
+userCheck(){
+      const { navigate } = this.props.navigation;
+      let email = this.state.currentEmail;
+      let pw = this.state.currentPassword;
+      axios.post('http://localhost:3000/userlogin/', {
+        Email: email,
+        Password: pw,
+      })
+      .then((response) => {
+        //console.warn(response);
+        this.setState({user: response.data});
+        global.UserID = this.state.user.id;
 
-  onSwipeLeft(gestureState) {
-    const { navigate } = this.props.navigation;
+        navigate('Main');
 
-    if (this.goLogin()){
-
-     navigate('Main');
+      })
+      .catch(function (error) {
+        console.warn(error);
+      });
     }
-    else{
-      this.setState({backgroundColor: 'red'});
-    }
+
+onSwipeLeft(gestureState) {
+        this.userCheck();
     }
 
 

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "lodash": "^4.17.4",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
     "react-native-animated-tabs": "^1.1.0",

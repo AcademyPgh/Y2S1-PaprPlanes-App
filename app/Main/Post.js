@@ -45,7 +45,7 @@ const  { navigate } = this.props.navigation;
 <View>
 
 
-        <View style = {style.PostLinkBoxMain}>
+       <View style = {style.PostLinkBoxMain}>
 
               <View style = {style.PostLinkBoxSub}>
 

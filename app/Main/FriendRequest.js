@@ -27,7 +27,7 @@ class FriendRequest extends React.Component {
               <Image source={declineFriend} style={style.DeclineIcon}/>
             </View>
             <View style = {style.RequesterBox}>
-              <Text style = {style.RequesterName}>Im a cool guy</Text>
+              <Text style = {style.RequesterName}>Im a cool guy!</Text>
               <Text style = {style.FriendRequestText}>Friend Request</Text>
             </View>
           <View>
