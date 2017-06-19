@@ -29,7 +29,7 @@ class LogIn extends React.Component {
       //backgroundColor: '#fff',
       currentEmail:"",
       currentPassword:"",
-      user: "",
+      user: [],
 
     };
     this.changeEmail = this.changeEmail.bind(this);
@@ -78,6 +78,7 @@ changePassword(pass) {
       })
     }
 userCheck(){
+      const { navigate } = this.props.navigation;
       let email = this.state.currentEmail;
       let pw = this.state.currentPassword;
       axios.post('http://localhost:3000/userlogin/', {
@@ -85,8 +86,12 @@ userCheck(){
         Password: pw,
       })
       .then((response) => {
-        console.warn(response);
+        //console.warn(response);
         this.setState({user: response.data});
+        global.UserID = this.state.user.id;
+
+        navigate('Main');
+
       })
       .catch(function (error) {
         console.warn(error);
@@ -94,14 +99,7 @@ userCheck(){
     }
 
 onSwipeLeft(gestureState) {
-    const { navigate } = this.props.navigation;
-
-
-        global.UserID = this.state.user;
-
-        navigate('Main');
-
-
+        this.userCheck();
     }
 
 

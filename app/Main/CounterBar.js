@@ -25,45 +25,45 @@ class CounterBar extends React.Component {
     this.totalCounter= this.totalCounter.bind(this);
     this.rightCounter= this.rightCounter.bind(this);
  }
- totalCounter(){
-   let sum = 0;
-   for(var i = 0; i<this.state.PostCount.length; i++)
-   {
-     if (this.state.PostCount[i].UserId === global.userId)
+   totalCounter(){
+     let sum = 0;
+     for(var i = 0; i<this.state.PostCount.length; i++)
      {
-       sum = sum + this.state.PostCount[i].RightCounter;
+       if (this.state.PostCount[i].UserId === global.userId)
+       {
+         sum = sum + this.state.PostCount[i].RightCounter;
+       }
+     }
+     return sum;
+   }
+
+   rightCounter(){
+     for(var i = 0; i<this.state.PostCount.length; i++)
+     {
+       if (this.state.PostCount[i].CurrentPost === true)
+       {
+         return this.state.PostCount[i].RightCounter;
+       }
      }
    }
-   return sum;
- }
-
- rightCounter(){
-   for(var i = 0; i<this.state.PostCount.length; i++)
-   {
-     if (this.state.PostCount[i].CurrentPost === true)
-     {
-       return this.state.PostCount[i].RightCounter;
-     }
-   }
- }
 
 
-  render(){
-    const { navigate } = this.props.navigation;
-    return (
-      <View style = {style.CounterBoxMain}>
-        <View style = {style.LeftContainer}>
-          <Text style = {style.CounterLeft}>{this.totalCounter()}</Text>
+    render(){
+      const { navigate } = this.props.navigation;
+      return (
+        <View style = {style.CounterBoxMain}>
+          <View style = {style.LeftContainer}>
+            <Text style = {style.CounterLeft}>{this.totalCounter()}</Text>
+          </View>
+        <CounterBarModal/>
+        <View style = {style.RightContainer}>
+          <Text style = {style.CounterRight}>{this.rightCounter()}</Text>
         </View>
-      <CounterBarModal/>
-      <View style = {style.RightContainer}>
-        <Text style = {style.CounterRight}>{this.rightCounter()}</Text>
       </View>
-    </View>
-    );
-  }
+      );
+    }
 
-}
+  }
 
 
 export default CounterBar;

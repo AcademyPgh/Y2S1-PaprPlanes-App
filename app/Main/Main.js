@@ -27,16 +27,64 @@ import CreatePicPost from '../CreatePost/CreatePicPost';
 import SearchPage from './SearchPage';
 import Welcome from '../SignUpLogIn/Welcome';
 import CounterBarModal from './CounterBarModal';
+import axios from 'axios';
+
 
 
 class Main extends React.Component {
   constructor(props){
    super(props);
-
+   this.UserLoad();
    this.state={
-     PostData: getPost()
+     PostData: getPost(),
+     User: [],
+     PostList: [],
+     RequestArray: [],
    }
+   this.UserLoad = this.UserLoad.bind(this);
+   this.PostLoad = this.PostLoad.bind(this);
+   this.RequestLoad = this.RequestLoad.bind(this);
  }
+UserLoad(){
+        console.warn('hello' + global.UserID);
+       axios.post('http://localhost:3000/userLoad/', {
+         userID: global.UserID
+       })
+       .then((response) => {
+
+         this.setState({User: response.data});
+       console.warn('this should work!!' + response.data);
+       })
+       .catch(function (error) {
+         console.warn(error);
+       });
+     }
+
+PostLoad(){
+      axios.post('http://localhost:3000/postLoad/', {
+          UserID: global.UserId
+        })
+        .then((response) => {
+          //console.warn(response);
+          this.setState({PostList: response});
+        })
+        .catch(function (error) {
+          console.warn(error);
+        });
+    }
+RequestLoad(){
+      axios.post('http://localhost:3000/requestLoad/', {
+          UserID: global.UserId
+        })
+            .then((response) => {
+          //console.warn(response);
+          this.setState({RequestArray: response});
+        })
+        .catch(function (error) {
+          console.warn(error);
+        });
+    }
+
 
  static navigationOptions = {
    headerStyle:{ backgroundColor: '#373435', marginTop: 20},
@@ -50,6 +98,8 @@ class Main extends React.Component {
   <View style = {{flex: 1}} >
 
     <CounterBar navigation = {this.props.navigation}/>
+
+
       <View style={style.CreatePost}>
         <View style={style.LinkContainer}>
           <TouchableOpacity onPress={() => { navigate('CreateLinkPost')}} ><Image source ={link2}/></TouchableOpacity>
@@ -61,11 +111,12 @@ class Main extends React.Component {
           <TouchableOpacity onPress={() => { navigate('CreateTextPost')}} ><Image source ={createtextpost2}/></TouchableOpacity>
         </View>
         </View>
+
         <ScrollView>
           <PostList  PostData={this.state.PostData} navigation = {this.props.navigation}/>
         </ScrollView>
 
-        <FriendRequest/>
+        <FriendRequest test= {this.state.User.Email}/>
 
 
   </View>
