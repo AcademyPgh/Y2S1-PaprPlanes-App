@@ -78,32 +78,32 @@ changePassword(pass) {
       })
     }
 userCheck(){
-      const { navigate } = this.props.navigation;
-      let email = this.state.currentEmail;
-      let pw = this.state.currentPassword;
-      axios.post('http://localhost:3000/userlogin/', {
-        Email: email,
-        Password: pw,
-      })
-      .then((response) => {
-        //console.warn(response);
-        this.setState({user: response.data});
-        global.UserID = this.state.user.id;
+    const { navigate } = this.props.navigation;
+    let email = this.state.currentEmail;
+    let pw = this.state.currentPassword;
+    axios.post('http://localhost:3000/userlogin/', {
+      Email: email,
+      Password: pw,
+    })
+    .then((response) => {
+      //console.warn(response);
+      this.setState({user: response.data});
+      global.UserID = this.state.user.id;
 
-        navigate('Main');
+      navigate('Main');
 
-      })
-      .catch(function (error) {
-        console.warn(error);
-      });
-    }
+    })
+    .catch(function (error) {
+      console.warn(error);
+    });
+  }
 
 onSwipeLeft(gestureState) {
         this.userCheck();
     }
 
 
-  render() {
+render() {
 
     const config = {
      velocityThreshold: 0.3,

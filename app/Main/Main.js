@@ -34,7 +34,7 @@ import axios from 'axios';
 class Main extends React.Component {
   constructor(props){
    super(props);
-   this.UserLoad();
+   this.PostLoad();
    this.state={
      PostData: getPost(),
      User: [],
@@ -46,9 +46,9 @@ class Main extends React.Component {
    this.RequestLoad = this.RequestLoad.bind(this);
  }
 UserLoad(){
-        console.warn('hello' + global.UserID);
+      console.warn('hello' + global.UserID);
        axios.post('http://localhost:3000/userLoad/', {
-         userID: global.UserID
+         UserId: global.UserID
        })
        .then((response) => {
 
@@ -62,7 +62,7 @@ UserLoad(){
 
 PostLoad(){
       axios.post('http://localhost:3000/postLoad/', {
-          UserID: global.UserId
+          UserId: global.UserId
         })
         .then((response) => {
           //console.warn(response);
@@ -72,9 +72,10 @@ PostLoad(){
           console.warn(error);
         });
     }
+    
 RequestLoad(){
       axios.post('http://localhost:3000/requestLoad/', {
-          UserID: global.UserId
+          UserId: global.UserId
         })
             .then((response) => {
           //console.warn(response);
@@ -92,7 +93,7 @@ RequestLoad(){
    backButtonTextStyle: { tintColor: '#FFF'},
  }
   render(){
-    const { navigate } = this.props.navigation;
+    const  { navigate } = this.props.navigation;
     return (
 
   <View style = {{flex: 1}} >
@@ -112,7 +113,7 @@ RequestLoad(){
         </View>
 
         <ScrollView>
-          <PostList  PostData={this.state.PostData} navigation = {this.props.navigation}/>
+          <PostList list = {this.state.PostList} navigation = {this.props.navigation}/>
         </ScrollView>
 
 

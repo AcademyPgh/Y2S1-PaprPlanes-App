@@ -87,8 +87,6 @@ const PaprPlanes = StackNavigator({
   Welcome: { screen: Welcome },
   Post: {screen: Post},
   ViewPost: {screen: ViewPost}
-
-
 });
 
 AppRegistry.registerComponent('PaprPlanes', () => PaprPlanes);

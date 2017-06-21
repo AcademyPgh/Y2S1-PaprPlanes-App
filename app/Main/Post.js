@@ -27,41 +27,41 @@ class Post extends React.Component {
    }
 
 
-chooseIcon() {
-  if (this.props.information.Type === 1) {
-    return CreateTextPost2;
-  }
-  else if (this.props.information.Type === 0){
-    return camera2;
-  }
-  else {
-    return link2;
-  }
-}
+    chooseIcon() {
+      if (this.props.information.Type === 1) {
+        return CreateTextPost2;
+      }
+      else if (this.props.information.Type === 0){
+        return camera2;
+      }
+      else {
+        return link2;
+      }
+    }
 
-render(){
-const  { navigate } = this.props.navigation;
-    return (
-<View>
-
-
-       <View style = {style.PostLinkBoxMain}>
-
-              <View style = {style.PostLinkBoxSub}>
-
-                 <Text style = {style.SenderName}>{this.props.information.SenderName}</Text>
-                 <Text style = {style.CreatorName}>{this.props.information.AuthorName}</Text>
-
-              </View>
-              <TouchableOpacity onPress={() => { navigate ('ViewPost', {info: this.props.information})} } >
-              <View style = {style.PostIcon}>
-                  <Image source = {this.chooseIcon()}/>
-              </View>
-            </TouchableOpacity>
-       </View>
+    render(){
+    const  { navigate } = this.props.navigation;
+        return (
+    <View>
 
 
-</View>
+           <View style = {style.PostLinkBoxMain}>
+
+                  <View style = {style.PostLinkBoxSub}>
+
+                     <Text style = {style.SenderName}>{this.props.information.SenderName}</Text>
+                     <Text style = {style.CreatorName}>{this.props.information.AuthorName}</Text>
+
+                  </View>
+                  <TouchableOpacity onPress={() => { navigate ('ViewPost', {info: this.props.information})} } >
+                  <View style = {style.PostIcon}>
+                      <Image source = {this.chooseIcon()}/>
+                  </View>
+                </TouchableOpacity>
+           </View>
+
+
+    </View>
 
 
     );

@@ -45,20 +45,20 @@ class CreateLinkPost extends React.Component {
     headerTitleStyle:{ color: '#FFF', fontFamily: 'Avenir'},
     title: 'Link Post',
 }
-  render(){
+render(){
 
 const { navigate } = this.props.navigation;
 return (
   <View style = {style.View3}>
 
   <View style = {style.container2}>
-  <TextInput style = {style.TextField}  onChangeText = {this.changeLink} placeholder = 'Link' autoCapitalize = 'none'/>
-  <TextInput style = {style.TextField} onChangeText = {this.changeCaption} placeholder = 'Caption' autoCapitalize = 'none' />
-  <TextInput style = {style.WebPreview} placeholder = 'Web Preview' autoCapitalize = 'none' />
+    <TextInput style = {style.TextField}  onChangeText = {this.changeLink} placeholder = 'Link' autoCapitalize = 'none'/>
+    <TextInput style = {style.TextField} onChangeText = {this.changeCaption} placeholder = 'Caption' autoCapitalize = 'none' />
+    <TextInput style = {style.WebPreview} placeholder = 'Web Preview' autoCapitalize = 'none' />
   </View>
   <View style = {style.container}>
-  <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {postInfo: this.state})}} ><LogInText>Send</LogInText></TouchableOpacity>
-</View>
+    <TouchableOpacity style = {style.SignUp2} onPress={() => { navigate('PostPassMain', {postInfo: this.state})}} ><LogInText>Send</LogInText></TouchableOpacity>
+  </View>
   </View>
 
     );
